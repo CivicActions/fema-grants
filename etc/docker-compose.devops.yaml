@@ -1,0 +1,20 @@
+version: '3'
+services:
+  proxy:
+    image: traefik
+    command: --api --docker --docker.domain=${DOCKER_MACHINE_NAME}
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /dev/null:/traefik.toml
+  jenkins:
+    image: jenkins/jenkins:lts
+    labels:
+      - "traefik.backend=jenkins"
+      - "traefik.port=8080"
+      - "traefik.frontend.rule=Host:jenkins.${DOCKER_MACHINE_NAME}"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+volumes:
+  jenkins_home:
