@@ -2,3 +2,4 @@
 */cache
 .composer/.htaccess
 web/sites/default/files
+docker-compose.override.yml

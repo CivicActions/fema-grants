@@ -16,9 +16,7 @@ RUN /usr/local/bin/getcomposer.sh
 ENV PATH="$PATH:/var/www/vendor/bin"
 
 # Copy in code so this can be used as a production image also.
-COPY --chown=www-data:www-data vendor /var/www/vendor
-COPY --chown=www-data:www-data web /var/www/html
-COPY --chown=www-data:www-data config /var/www/config
+COPY --chown=www-data:www-data . /var/www
 
 # Custom entrypoint.
 COPY .docker/docker-entrypoint.sh /

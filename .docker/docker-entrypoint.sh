@@ -17,7 +17,7 @@ fi
 usermod -s /bin/bash www-data
 usermod -d /var/www www-data
 
-echo The apache user and group has been set to the following:
+echo "The apache user and group has been set to the following:"
 id www-data
 
 # Wait for mysql connection.
@@ -32,7 +32,11 @@ while ! bash -c "cat < /dev/null > /dev/tcp/db/3306"; do
   sleep 2;
 done
 
-echo Installing Drupal
-su www-data -c'/var/www/vendor/bin/drush -y site:install minimal --account-pass=civicactions --sites-subdir=default --db-url=mysql://dbuser:dbpass@db:3306/drupal --config-dir=/var/www/config/sync'
+if [[ "$(drush core-status --field=bootstrap | sed 's/[^a-zA-Z]*//g')" == "Successful" ]]; then
+  echo "Drupal already installed"
+else
+	echo "Installing Drupal"
+	su www-data -c'/var/www/vendor/bin/drush -y site:install minimal --account-pass=civicactions --sites-subdir=default --db-url=mysql://dbuser:dbpass@db:3306/drupal --config-dir=/var/www/config/sync'
+fi
 
 exec /usr/local/bin/docker-php-entrypoint apache2-foreground
