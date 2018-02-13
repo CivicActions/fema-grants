@@ -1,0 +1,22 @@
+uuid: 88e6ff45-7f6b-4771-bcd3-5e02f5e0861d
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - uswds
+_core:
+  default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
+id: uswds_login
+theme: uswds
+region: sidebar_first
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }
