@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: mariadb:10.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbpass
+      - MYSQL_DATABASE=drupal
+    networks:
+      - db
+  drupal:
+    image: civicactions/fema-grants
+    links:
+      - db
+    labels:
+      - "traefik.backend=web"
+      - "traefik.frontend.rule=Host:drupal.${DOCKER_MACHINE_NAME}"
+    networks:
+      - web
+      - db
+networks:
+  web:
+    external: true
+  db:

@@ -4,35 +4,51 @@ if [ "$2" = "" ]; then
   echo "Usage ./bin/deploy [subdomain] [domain]"
   exit 1
 fi
+if [ "$AWS_ACCESS_KEY_ID" = "" ]; then
+  echo "Environment variables missing - copy .env.template to .env and add values,"
+  echo "run 'source .env' and re-run deploy."
+  exit 1
+fi
 SUBDOMAIN="$1"
 DOMAIN="$2"
 # Create host NAME combining subdomain+domain.
 NAME="${SUBDOMAIN}.${DOMAIN}"
 AWS='docker run --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_VPC_ID -e AWS_DEFAULT_REGION -e AWS_ZONE -e AWS_SUBNET_ID anigeo/awscli'
 
-IP=$(docker-machine ip "${NAME}")
-if [ "$IP" = "" ]; then
-  echo "[deploy] Attempting to create Docker Machine ${NAME}"
+EXISTS=$(docker-machine ls -t "2" -q --filter name="${NAME}")
+if [ "$EXISTS" = "" ]; then
+  echo "[deploy] Attempting to create Docker Machine ${NAME}."
 	docker-machine create "${NAME}" --driver amazonec2
-	echo "[deploy] Docker Machine created. Waiting a few seconds before getting the IP and ID"
+	echo "[deploy] Docker Machine created. Waiting a few seconds before getting the IP and ID."
 	sleep 10
 	IP=$(docker-machine ip "${NAME}")
 	INSTANCE_ID=$(docker-machine inspect --format='{{.Driver.InstanceId}}' "${NAME}" 2>&1)
 	echo "[deploy] Machine created at IP=${IP}, INSTANCE_ID=${INSTANCE_ID}."
 else
-	echo "[deploy] Docker machine already exists. To recreate, execute 'docker-machine rm ${NAME}' then re-run deploy."
+  IP=$(docker-machine ip "${NAME}")
+	echo "[deploy] Docker machine already exists at ${IP}. To recreate, execute 'docker-machine rm ${NAME}' then re-run deploy."
 fi
 
 echo "[deploy] Managing AWS security groups."
 ${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
 ${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
+${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol tcp --port 443 --cidr 0.0.0.0/0
+${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 443 --cidr 0.0.0.0/0
 
-# Setup DNS and CDN.
 echo "[deploy] Managing DNS."
-for SUFFIX in "" "-jenkins"; do
-	docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli removerecord "${SUBDOMAIN}${SUFFIX}"
-	docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli -a -t A addrecord "${SUBDOMAIN}${SUFFIX}" "${IP}"
+for PREFIX in '' '*.'; do
+	docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli removerecord "${PREFIX}${SUBDOMAIN}"
+	docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli -t A addrecord "${PREFIX}${SUBDOMAIN}" "${IP}"
 done
 
-echo "[deploy] Deployed to https://${SUBDOMAIN}.${DOMAIN}"
+eval "$(docker-machine env "${NAME}")"
+echo "[deploy] Configuring Docker networking."
+docker network inspect web &> /dev/null
+if [ $? -ne 0 ]; then
+  docker network create web
+fi
+echo "[deploy] Installing DevOps services."
+docker-machine scp deploy/traefik.toml fema.civicactions.net:
+docker-compose -f deploy/docker-compose.devops.yaml up -d
+
 echo "[deploy] Deploy success." 
