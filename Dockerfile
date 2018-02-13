@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM php:7.1-apache
 
 # Install Drupal requirements.
 RUN apt-get update && apt-get -y install wget libpng-dev mysql-client libbz2-dev git zip unzip && \
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get -y install wget libpng-dev mysql-client libbz2-dev
 RUN a2enmod rewrite
 
 # Add PHP config.
-COPY .docker/opcache-recommended.ini /usr/local/etc/php/conf.d
+COPY .docker/php-docker.ini /usr/local/etc/php/conf.d
 
 # Install PHP Composer.
 COPY .docker/getcomposer.sh /usr/local/bin
@@ -17,7 +17,6 @@ ENV PATH="$PATH:/var/www/vendor/bin"
 
 # Copy in code so this can be used as a production image also.
 COPY web /var/www/html
-WORKDIR /var/www
 
 # Custom entrypoint.
 COPY .docker/docker-entrypoint.sh /
