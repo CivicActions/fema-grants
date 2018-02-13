@@ -1,4 +1,4 @@
-uuid: 3739095c-caca-45fb-90ae-4f297df72e82
+uuid: 9c0a0597-b9e8-4aaa-921d-7116e47426b4
 langcode: en
 status: false
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - stark
+    - uswds
 _core:
   default_config_hash: DWAB7HaAfAJerAmyT8B2K-6qxicu9n0PcKVpDr--N4c
-id: stark_admin
-theme: stark
+id: uswds_admin
+theme: uswds
 region: sidebar_first
 weight: 1
 provider: null

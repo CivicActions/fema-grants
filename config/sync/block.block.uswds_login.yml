@@ -1,15 +1,15 @@
-uuid: 9926683c-c5f4-4bcb-9629-e92af0e7d77b
+uuid: 88e6ff45-7f6b-4771-bcd3-5e02f5e0861d
 langcode: en
 status: false
 dependencies:
   module:
     - user
   theme:
-    - stark
+    - uswds
 _core:
   default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
-id: stark_login
-theme: stark
+id: uswds_login
+theme: uswds
 region: sidebar_first
 weight: 0
 provider: null

@@ -1,15 +1,15 @@
-uuid: f5ed90a1-4511-456c-bcc0-b5bc1967ec6f
+uuid: 9d54409a-73a8-4ff7-b968-4f5a26462fa0
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - stark
+    - uswds
 _core:
   default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
-id: stark_messages
-theme: stark
+id: uswds_messages
+theme: uswds
 region: highlighted
 weight: 0
 provider: null

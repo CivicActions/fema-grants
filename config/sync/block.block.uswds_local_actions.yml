@@ -1,13 +1,13 @@
-uuid: ca987537-16ff-4165-820b-78517d37eb8f
+uuid: 6a46e4bd-9337-4c66-86b9-6ccaf2a3c332
 langcode: en
 status: true
 dependencies:
   theme:
-    - stark
+    - uswds
 _core:
   default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
-id: stark_local_actions
-theme: stark
+id: uswds_local_actions
+theme: uswds
 region: content
 weight: -4
 provider: null
