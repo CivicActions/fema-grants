@@ -32,15 +32,23 @@ fi
 echo "[deploy] Managing AWS security groups."
 ${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
 ${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
+${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol tcp --port 443 --cidr 0.0.0.0/0
+${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 443 --cidr 0.0.0.0/0
 
 echo "[deploy] Managing DNS."
-for PREFIX in "" "jenkins."; do
+for PREFIX in '' '*.'; do
 	docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli removerecord "${PREFIX}${SUBDOMAIN}"
-	docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli -a -t A addrecord "${PREFIX}${SUBDOMAIN}" "${IP}"
+	docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli -t A addrecord "${PREFIX}${SUBDOMAIN}" "${IP}"
 done
 
-echo "[deploy] Installing DevOps services."
 eval "$(docker-machine env "${NAME}")"
-docker-compose -f etc/docker-compose.devops.yaml up -d
+echo "[deploy] Configuring Docker networking."
+docker network inspect web &> /dev/null
+if [ $? -ne 0 ]; then
+  docker network create web
+fi
+echo "[deploy] Installing DevOps services."
+docker-machine scp deploy/traefik.toml fema.civicactions.net:
+docker-compose -f deploy/docker-compose.devops.yaml up -d
 
 echo "[deploy] Deploy success." 

@@ -1,0 +1,28 @@
+version: '3'
+services:
+  proxy:
+    image: traefik
+    command: --api --docker --docker.domain=${DOCKER_MACHINE_NAME} --docker.watch --logLevel=DEBUG --defaultEntryPoints=http,https --entryPoints='Name:http Address::80 Redirect.EntryPoint:https' --entryPoints='Name:https Address::443 TLS' --acme --acme.storage=/acme.json --acme.onhostrule=true --acme.entryPoint=https --acme.httpChallenge.entryPoint=http --acme.email="it+fema@civicactions.com"
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /dev/null:/traefik.toml
+  jenkins:
+    image: jenkins/jenkins:lts
+    labels:
+      - "traefik.backend=jenkins"
+      - "traefik.port=8080"
+      - "traefik.frontend.rule=Host:jenkins.${DOCKER_MACHINE_NAME}"
+    networks:
+      - web
+    volumes:
+      - jenkins_home:/var/jenkins_home
+networks:
+  web:
+    external: true
+volumes:
+  jenkins_home:

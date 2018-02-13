@@ -17,6 +17,7 @@ ENV PATH="$PATH:/var/www/vendor/bin"
 
 # Copy in code so this can be used as a production image also.
 COPY web /var/www/html
+COPY vendor /var/www/vendor
 
 # Custom entrypoint.
 COPY .docker/docker-entrypoint.sh /
