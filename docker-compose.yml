@@ -11,8 +11,10 @@ services:
     volumes:
       - ./.docker/etc/my.cnf:/etc/my.cnf
   web:
-    image: CivicActions/fema-grants
+    image: civicactions/fema-grants
     volumes:
       - .:/var/www
     links:
       - db
+    ports:
+      - "80:8118"
