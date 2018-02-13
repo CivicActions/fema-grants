@@ -1,0 +1,18 @@
+version: "3"
+services:
+  db:
+    image: mariadb:10.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbpass
+      - MYSQL_DATABASE=drupal
+      - MYSQL_HOME=/etc
+    volumes:
+      - ./.docker/etc/my.cnf:/etc/my.cnf
+  web:
+    image: CivicActions/fema-grants
+    volumes:
+      - .:/var/www
+    links:
+      - db
