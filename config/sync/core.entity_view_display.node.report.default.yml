@@ -1,0 +1,44 @@
+uuid: 5ead403f-5e07-4fd1-a883-c9568d0ce992
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.report.field_fed_agency_org_element
+    - field.field.node.report.field_fed_grant_identifying_numb
+    - field.field.node.report.field_recipient_org_name
+    - node.type.report
+  module:
+    - user
+id: node.report.default
+targetEntityType: node
+bundle: report
+mode: default
+content:
+  field_fed_agency_org_element:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_fed_grant_identifying_numb:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_recipient_org_name:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }
