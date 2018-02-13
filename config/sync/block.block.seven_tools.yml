@@ -1,4 +1,4 @@
-uuid: 3619cde6-551f-4af0-9019-a2add0d415d0
+uuid: 1f2db46e-e624-4a64-b854-474833c54be1
 langcode: en
 status: false
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - stark
+    - seven
 _core:
   default_config_hash: xCOijLdB1-UgXxQ9a0D1_pd8vxNEhfMnxXZc8jYhHjs
-id: stark_tools
-theme: stark
-region: sidebar_first
+id: seven_tools
+theme: seven
+region: header
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'
