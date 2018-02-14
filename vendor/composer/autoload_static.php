@@ -4,17 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit424c14203558bdb33f5d6ffb5572056a
+class ComposerStaticInit0e56b33efb59dc761c112077a38e3ae5
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         '952683d815ff0a7bf322b93c0be7e4e4' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/bootstrap.php',
@@ -57,6 +57,7 @@ class ComposerStaticInit424c14203558bdb33f5d6ffb5572056a
         ),
         'S' => 
         array (
+            'Symfony\\Thanks\\' => 15,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Iconv\\' => 23,
             'Symfony\\Component\\Yaml\\' => 23,
@@ -170,8 +171,8 @@ class ComposerStaticInit424c14203558bdb33f5d6ffb5572056a
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
         'cweagans\\Composer\\' => 
         array (
@@ -220,6 +221,10 @@ class ComposerStaticInit424c14203558bdb33f5d6ffb5572056a
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Symfony\\Thanks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/thanks/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -1316,10 +1321,10 @@ class ComposerStaticInit424c14203558bdb33f5d6ffb5572056a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit424c14203558bdb33f5d6ffb5572056a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit424c14203558bdb33f5d6ffb5572056a::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit424c14203558bdb33f5d6ffb5572056a::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit424c14203558bdb33f5d6ffb5572056a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0e56b33efb59dc761c112077a38e3ae5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0e56b33efb59dc761c112077a38e3ae5::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0e56b33efb59dc761c112077a38e3ae5::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit0e56b33efb59dc761c112077a38e3ae5::$classMap;
 
         }, null, ClassLoader::class);
     }
