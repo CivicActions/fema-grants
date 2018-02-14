@@ -1,0 +1,20 @@
+uuid: e5bb65e2-3b35-4b80-9fce-3e28391a151c
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+    - workflow
+id: workflow_transition.field_assign_to
+field_name: field_assign_to
+entity_type: workflow_transition
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

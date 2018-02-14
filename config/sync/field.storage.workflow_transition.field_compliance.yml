@@ -1,0 +1,30 @@
+uuid: 1ef3fd14-f14b-430a-b93c-e1c7aedeb11b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - workflow
+id: workflow_transition.field_compliance
+field_name: field_compliance
+entity_type: workflow_transition
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Under review'
+      label: 'Under review'
+    -
+      value: 'In compliance'
+      label: 'In compliance'
+    -
+      value: 'Not in compliance'
+      label: 'Not in compliance'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

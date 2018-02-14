@@ -1,0 +1,26 @@
+uuid: 1c2ff7c9-1c0b-44d9-9d90-b6af5fed09d4
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.report.field_review_status
+    - node.type.report
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.report.teaser
+targetEntityType: node
+bundle: report
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_review_status: true

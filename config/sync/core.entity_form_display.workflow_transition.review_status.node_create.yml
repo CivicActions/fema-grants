@@ -1,0 +1,24 @@
+uuid: a05c1982-e114-4307-8f37-f92b857115e0
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_form_mode.workflow_transition.node_create
+    - field.field.workflow_transition.review_status.field_assign_to
+    - field.field.workflow_transition.review_status.field_compliance
+    - workflow.workflow.review_status
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: workflow_transition.review_status.node_create
+targetEntityType: workflow_transition
+bundle: review_status
+mode: node_create
+content: {  }
+hidden:
+  field_assign_to: true
+  field_compliance: true

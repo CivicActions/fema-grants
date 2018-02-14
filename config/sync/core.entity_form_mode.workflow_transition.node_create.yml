@@ -1,0 +1,10 @@
+uuid: b2ad6809-23f8-4e62-b6e4-d6fe1ace0702
+langcode: en
+status: true
+dependencies:
+  module:
+    - workflow
+id: workflow_transition.node_create
+label: 'Node create'
+targetEntityType: workflow_transition
+cache: true

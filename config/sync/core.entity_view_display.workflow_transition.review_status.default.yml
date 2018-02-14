@@ -1,0 +1,37 @@
+uuid: c45db343-5e29-4ace-9adf-d20fa01012c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.workflow_transition.review_status.field_assign_to
+    - field.field.workflow_transition.review_status.field_compliance
+    - workflow.workflow.review_status
+  module:
+    - field_layout
+    - layout_discovery
+    - options
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: workflow_transition.review_status.default
+targetEntityType: workflow_transition
+bundle: review_status
+mode: default
+content:
+  field_assign_to:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_compliance:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

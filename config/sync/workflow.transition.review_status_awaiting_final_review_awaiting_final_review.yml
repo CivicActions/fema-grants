@@ -1,0 +1,10 @@
+uuid: 3d3018d3-ab39-4944-a0d1-4b7b4c51555f
+langcode: en
+status: true
+dependencies: {  }
+id: review_status_awaiting_final_review_awaiting_final_review
+label: ''
+module: null
+from_sid: review_status_awaiting_final_review
+to_sid: review_status_awaiting_final_review
+roles: {  }

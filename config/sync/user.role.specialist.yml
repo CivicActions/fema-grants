@@ -6,4 +6,16 @@ id: specialist
 label: Specialist
 weight: 5
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access any internal_status workflow_transion overview'
+  - 'access any review_status workflow_transion overview'
+  - 'access content'
+  - 'access internal_status workflow_transition form'
+  - 'access own internal_status workflow_transion overview'
+  - 'access own review_status workflow_transion overview'
+  - 'access review_status workflow_transition form'
+  - 'create internal_status workflow_transition'
+  - 'create review_status workflow_transition'
+  - 'create update_internal_status workflow_transition'
+  - 'schedule internal_status workflow_transition'
+  - 'schedule review_status workflow_transition'
