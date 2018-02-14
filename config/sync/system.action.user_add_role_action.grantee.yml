@@ -1,0 +1,14 @@
+uuid: 1975dbb6-5d4f-4123-954f-c0ac4bc3c2df
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.grantee
+  module:
+    - user
+id: user_add_role_action.grantee
+label: 'Add the Grantee role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: grantee

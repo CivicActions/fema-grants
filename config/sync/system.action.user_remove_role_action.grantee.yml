@@ -1,0 +1,14 @@
+uuid: 9681d5c1-b76b-4278-8b49-3afc6333b78e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.grantee
+  module:
+    - user
+id: user_remove_role_action.grantee
+label: 'Remove the Grantee role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: grantee

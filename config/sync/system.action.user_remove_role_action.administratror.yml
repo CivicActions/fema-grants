@@ -1,0 +1,14 @@
+uuid: b4ed220a-eb0b-4482-9825-75d21d7a18eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.administratror
+  module:
+    - user
+id: user_remove_role_action.administratror
+label: 'Remove the Administratror role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: administratror

@@ -1,0 +1,14 @@
+uuid: 53f82665-c130-4ad4-92b9-f98492971e18
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.administratror
+  module:
+    - user
+id: user_add_role_action.administratror
+label: 'Add the Administratror role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: administratror

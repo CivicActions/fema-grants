@@ -1,0 +1,9 @@
+uuid: 55069124-f298-405e-9ab0-85d0530ed70f
+langcode: en
+status: true
+dependencies: {  }
+id: administratror
+label: Administratror
+weight: 2
+is_admin: null
+permissions: {  }
