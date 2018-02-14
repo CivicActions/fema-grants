@@ -1,0 +1,23 @@
+{
+	"name": "components/chosen",
+	"description": "Chosen is a library for making long, unwieldy select boxes more friendly.",
+	"type": "component",
+	"license": "MIT",
+	"extra": {
+		"component": {
+			"files": [
+				"chosen.jquery.js",
+				"chosen.jquery.min.js",
+				"chosen.proto.js",
+				"chosen.proto.min.js",
+				"chosen.css",
+				"chosen.min.css",
+				"chosen-sprite@2x.png",
+				"chosen-sprite.png"
+			]
+    	}
+    },
+	"require": {
+		"components/jquery": "*"
+	}
+}

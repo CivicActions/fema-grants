@@ -1,0 +1,14 @@
+name: 'Workflow operations'
+description: "Adds lesser-used Transition permissions (edit, revert, delete permissions)."
+package: Workflow
+type: module
+# core: 8.x
+
+dependencies:
+  - workflow
+
+# Information added by Drupal.org packaging script on 2017-12-17
+version: '8.x-1.0'
+core: '8.x'
+project: 'workflow'
+datestamp: 1513552400
