@@ -1,0 +1,22 @@
+uuid: e21d0685-ee59-426b-a5e4-8f55ec56b8ba
+langcode: en
+status: true
+dependencies:
+  theme:
+    - femagrants
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: femagrants_local_tasks
+theme: femagrants
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

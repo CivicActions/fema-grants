@@ -1,0 +1,22 @@
+uuid: f044baf1-6d43-47fb-a1e6-9c445c85c479
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - femagrants
+_core:
+  default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
+id: femagrants_login
+theme: femagrants
+region: sidebar_first
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

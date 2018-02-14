@@ -1,0 +1,20 @@
+uuid: 366223a9-0c21-405c-8003-3c04bd71635d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - femagrants
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: femagrants_local_actions
+theme: femagrants
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
