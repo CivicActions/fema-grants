@@ -1,0 +1,9 @@
+uuid: 5d778aed-e223-43dd-af63-e65842ef1252
+langcode: en
+status: true
+dependencies: {  }
+id: specialist
+label: Specialist
+weight: 5
+is_admin: null
+permissions: {  }
