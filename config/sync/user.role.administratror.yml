@@ -6,4 +6,9 @@ id: administratror
 label: Administratror
 weight: 2
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access content'
+  - 'administer workflow'
+  - 'bypass internal_status workflow_transition access'
+  - 'create review_status workflow_transition'
+  - 'create update_internal_status workflow_transition'

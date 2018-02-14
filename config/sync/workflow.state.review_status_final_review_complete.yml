@@ -1,0 +1,10 @@
+uuid: c59637be-3dd0-463c-98cd-8ead2a4c59ef
+langcode: en
+status: true
+dependencies: {  }
+id: review_status_final_review_complete
+label: 'Final review complete'
+module: null
+wid: review_status
+weight: -5
+sysid: 0

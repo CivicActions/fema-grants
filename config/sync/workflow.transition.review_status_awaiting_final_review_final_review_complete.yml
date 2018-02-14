@@ -1,0 +1,17 @@
+uuid: 5526f796-eeb1-4df0-9182-db44d870f02f
+langcode: en
+status: true
+dependencies: {  }
+id: review_status_awaiting_final_review_final_review_complete
+label: 'Approve the review'
+module: null
+from_sid: review_status_awaiting_final_review
+to_sid: review_status_final_review_complete
+roles:
+  analyst: analyst
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  administratror: '0'
+  grantee: '0'
+  specialist: '0'

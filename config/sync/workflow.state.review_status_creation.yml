@@ -1,0 +1,10 @@
+uuid: 0446842b-9f63-4de7-ac0c-f91211f2e8e5
+langcode: en
+status: true
+dependencies: {  }
+id: review_status_creation
+label: Creation
+module: null
+wid: review_status
+weight: -11
+sysid: 1

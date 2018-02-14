@@ -1,0 +1,10 @@
+uuid: dde65c1d-80ab-4930-a149-f281d134f47e
+langcode: en
+status: true
+dependencies: {  }
+id: review_status_unassigned
+label: 'Awaiting assignment'
+module: null
+wid: review_status
+weight: -8
+sysid: 0

@@ -1,0 +1,14 @@
+uuid: 7a00eb4e-2e43-4aa4-a0a6-380da2165425
+langcode: en
+status: true
+dependencies: {  }
+id: review_status
+label: 'Review status'
+module: null
+options:
+  name_as_title: 0
+  fieldset: 0
+  options: select
+  schedule_timezone: 0
+  comment_log_node: 1
+  watchdog_log: 1

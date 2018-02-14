@@ -1,0 +1,21 @@
+uuid: 14253009-ab28-4a84-9f2e-f2309117de7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.workflow_transition.field_compliance
+    - workflow.workflow.review_status
+  module:
+    - options
+id: workflow_transition.review_status.field_compliance
+field_name: field_compliance
+entity_type: workflow_transition
+bundle: review_status
+label: Compliance
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

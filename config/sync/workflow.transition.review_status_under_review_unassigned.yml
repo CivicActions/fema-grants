@@ -1,0 +1,17 @@
+uuid: fe205771-1c62-4140-95ae-c24876bece78
+langcode: en
+status: true
+dependencies: {  }
+id: review_status_under_review_unassigned
+label: Unassign
+module: null
+from_sid: review_status_under_review
+to_sid: review_status_unassigned
+roles:
+  analyst: analyst
+  specialist: specialist
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  administratror: '0'
+  grantee: '0'

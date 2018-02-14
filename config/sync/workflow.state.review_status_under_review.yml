@@ -1,0 +1,10 @@
+uuid: 42430cde-7f3d-4ec0-a84f-32c00bd9a4e3
+langcode: en
+status: true
+dependencies: {  }
+id: review_status_under_review
+label: 'Under review'
+module: null
+wid: review_status
+weight: -7
+sysid: 0
