@@ -43,12 +43,10 @@ done
 
 eval "$(docker-machine env "${NAME}")"
 echo "[deploy] Configuring Docker networking."
-docker network inspect web &> /dev/null
-if [ $? -ne 0 ]; then
+if [ "$(docker network inspect web -f '{{ .Name }}')" != "web" ]; then
   docker network create web
 fi
 echo "[deploy] Installing DevOps services."
-docker-machine scp deploy/traefik.toml fema.civicactions.net:
 docker-compose -f deploy/docker-compose.devops.yaml up -d
 
 echo "[deploy] Deploy success." 
