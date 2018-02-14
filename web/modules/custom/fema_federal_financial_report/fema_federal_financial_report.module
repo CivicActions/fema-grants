@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains fema_federal_financial_report.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function fema_federal_financial_report_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the fema_federal_financial_report module.
+    case 'help.page.fema_federal_financial_report':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('FEMA Federal Financial Report') . '</p>';
+      return $output;
+
+    default:
+  }
+}
