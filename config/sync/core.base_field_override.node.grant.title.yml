@@ -1,0 +1,18 @@
+uuid: 30723599-c038-4e2f-9e3f-3c57cea35328
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.grant
+id: node.grant.title
+field_name: title
+entity_type: node
+bundle: grant
+label: 'Grant Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

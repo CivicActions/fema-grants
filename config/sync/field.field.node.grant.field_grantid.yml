@@ -1,0 +1,19 @@
+uuid: 2fba61a1-6900-4340-b798-9c8f4bac5e8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grantid
+    - node.type.grant
+id: node.grant.field_grantid
+field_name: field_grantid
+entity_type: node
+bundle: grant
+label: GrantID
+description: 'Grant ID'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
