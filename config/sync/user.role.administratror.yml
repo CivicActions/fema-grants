@@ -5,10 +5,12 @@ dependencies: {  }
 id: administratror
 label: Administratror
 weight: 2
-is_admin: null
+is_admin: true
 permissions:
   - 'access content'
   - 'administer workflow'
   - 'bypass internal_status workflow_transition access'
   - 'create review_status workflow_transition'
   - 'create update_internal_status workflow_transition'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
