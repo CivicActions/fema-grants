@@ -9,7 +9,7 @@ id: node.report.field_11_16_total_base
 field_name: field_11_16_total_base
 entity_type: node
 bundle: report
-label: ''
+label: 'Total Base'
 description: ''
 required: false
 translatable: false

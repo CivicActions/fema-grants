@@ -9,7 +9,7 @@ id: node.report.field_11_11_period_to
 field_name: field_11_11_period_to
 entity_type: node
 bundle: report
-label: ''
+label: 'Period To'
 description: ''
 required: false
 translatable: false

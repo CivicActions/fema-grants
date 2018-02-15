@@ -9,7 +9,7 @@ id: node.report.field_11_12_base
 field_name: field_11_12_base
 entity_type: node
 bundle: report
-label: ''
+label: Base
 description: ''
 required: false
 translatable: false

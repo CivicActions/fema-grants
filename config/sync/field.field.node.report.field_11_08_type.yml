@@ -1,4 +1,4 @@
-uuid: 209e5750-2bfd-477b-938b-a48e74bdb524
+uuid: 209e5750-2bfd-477b-938b-a48e74bdb850
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.report.field_11_08_type
 field_name: field_11_08_type
 entity_type: node
 bundle: report
-label: ''
+label: Type
 description: ''
 required: false
 translatable: false

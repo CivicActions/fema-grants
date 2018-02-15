@@ -9,7 +9,7 @@ id: node.report.field_12_1_remarks
 field_name: field_12_1_remarks
 entity_type: node
 bundle: report
-label: ''
+label: Remarks
 description: ''
 required: false
 translatable: false

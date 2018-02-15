@@ -9,7 +9,7 @@ id: node.report.field_11_13_amount_charged
 field_name: field_11_13_amount_charged
 entity_type: node
 bundle: report
-label: ''
+label: 'Amount Charged'
 description: ''
 required: false
 translatable: false

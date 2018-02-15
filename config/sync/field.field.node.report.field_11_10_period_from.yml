@@ -9,7 +9,7 @@ id: node.report.field_11_10_period_from
 field_name: field_11_10_period_from
 entity_type: node
 bundle: report
-label: ''
+label: 'Period From'
 description: ''
 required: false
 translatable: false
