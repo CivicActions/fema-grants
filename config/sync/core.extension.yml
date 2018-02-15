@@ -28,7 +28,6 @@ module:
   options: 0
   page_cache: 0
   path: 0
-  r4032login: 0
   responsive_image: 0
   search: 0
   statistics: 0

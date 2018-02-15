@@ -39,7 +39,6 @@
         "drupal/chosen": "^2.4",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.4",
-        "drupal/r4032login": "1.x-dev",
         "drupal/uswds": "^1.0@beta",
         "drupal/workflow": "^1.0",
         "drush/drush": "^9.0.0",
