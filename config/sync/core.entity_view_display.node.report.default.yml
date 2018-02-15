@@ -23,11 +23,6 @@ content:
     region: first
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 0
-    region: first
-    settings: {  }
-    third_party_settings: {  }
   field_01_0_federal_agency_and_or:
     weight: 201
     label: above
@@ -468,5 +463,10 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  links:
+    weight: 0
+    region: first
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_review_status: true

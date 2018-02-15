@@ -23,7 +23,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_review_status: true
   field_01_0_federal_agency_and_or: true
   field_02_0_federal_grant_or_othe: true
   field_03_1_organization_name: true
@@ -79,3 +78,4 @@ hidden:
   field_13_3_telephone_number: true
   field_13_4_email: true
   field_13_5_date_report_submitted: true
+  field_review_status: true
