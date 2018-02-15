@@ -1,0 +1,20 @@
+uuid: 10e00a37-3287-462b-ac2c-0885c49402e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_grantee_contact
+field_name: field_grantee_contact
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

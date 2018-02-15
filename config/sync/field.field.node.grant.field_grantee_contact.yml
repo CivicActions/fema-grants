@@ -1,0 +1,21 @@
+uuid: eb7e7b64-da33-492d-9a22-f7fdbf58bff5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grantee_contact
+    - node.type.grant
+id: node.grant.field_grantee_contact
+field_name: field_grantee_contact
+entity_type: node
+bundle: grant
+label: 'Grantee Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference
