@@ -19,3 +19,4 @@ permissions:
   - 'create update_internal_status workflow_transition'
   - 'schedule internal_status workflow_transition'
   - 'schedule review_status workflow_transition'
+  - 'use text format filtered_html'

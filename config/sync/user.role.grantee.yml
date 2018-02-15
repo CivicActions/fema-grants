@@ -10,6 +10,8 @@ permissions:
   - 'access content'
   - 'access own internal_status workflow_transion overview'
   - 'create report content'
+  - 'create review_status workflow_transition'
   - 'create update_internal_status workflow_transition'
+  - 'use text format filtered_html'
   - 'view own unpublished content'
   - 'view the administration theme'
