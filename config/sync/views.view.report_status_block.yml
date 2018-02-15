@@ -27,7 +27,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'access any review_status workflow_transion overview'
       cache:
         type: tag
         options: {  }

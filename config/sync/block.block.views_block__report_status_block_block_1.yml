@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.report_status_block
   module:
+    - user
     - views
   theme:
     - femagrants
@@ -22,4 +23,11 @@ settings:
   views_label: ''
   items_per_page: none
   context_mapping: {  }
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      grantee: grantee
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
