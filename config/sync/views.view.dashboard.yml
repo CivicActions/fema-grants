@@ -29,7 +29,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'create internal_status workflow_transition'
+          perm: 'access review_status workflow_transition form'
       cache:
         type: tag
         options: {  }
@@ -44,7 +44,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Filter
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -71,6 +71,81 @@ display:
             next: ››
       style:
         type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            title: title
+            uid_1: uid_1
+            uid: uid
+            to_sid: to_sid
+            field_assign_to: field_assign_to
+            field_compliance: field_compliance
+            roles_target_id: field_assign_to
+            roles: uid
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            uid_1:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            uid:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: '<br />'
+              empty_column: false
+              responsive: ''
+            to_sid:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_assign_to:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: '<br />'
+              empty_column: false
+              responsive: ''
+            field_compliance:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            roles_target_id:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            roles:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
       row:
         type: fields
       fields:
@@ -190,7 +265,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: false
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -255,7 +330,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: false
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -269,6 +344,69 @@ display:
           entity_type: workflow_transition
           entity_field: uid
           plugin_id: field
+        field_assign_to:
+          id: field_assign_to
+          table: workflow_transition__field_assign_to
+          field: field_assign_to
+          relationship: field_review_status_tid
+          group_type: group
+          admin_label: ''
+          label: 'Assigned to'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         to_sid:
           id: to_sid
           table: workflow_transition_history
@@ -276,7 +414,7 @@ display:
           relationship: field_review_status_tid
           group_type: group
           admin_label: ''
-          label: 'To state'
+          label: Status
           exclude: false
           alter:
             alter_text: false
@@ -333,69 +471,6 @@ display:
           field_api_classes: false
           entity_type: workflow_transition
           entity_field: to_sid
-          plugin_id: field
-        field_assign_to:
-          id: field_assign_to
-          table: workflow_transition__field_assign_to
-          field: field_assign_to
-          relationship: field_review_status_tid
-          group_type: group
-          admin_label: ''
-          label: 'Assigned to'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
           plugin_id: field
         field_compliance:
           id: field_compliance
@@ -459,6 +534,123 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        roles_target_id:
+          id: roles_target_id
+          table: user__roles
+          field: roles_target_id
+          relationship: field_assign_to
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: separator
+          separator: ', '
+          entity_type: user
+          plugin_id: user_roles
+        roles:
+          id: roles
+          table: user__roles
+          field: roles
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: user
+          entity_field: roles
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -471,6 +663,49 @@ display:
           expose:
             operator: ''
           group: 1
+        field_review_status_value:
+          id: field_review_status_value
+          table: node__field_review_status
+          field: field_review_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_review_status_value_op
+            label: Status
+            description: ''
+            use_operator: false
+            operator: field_review_status_value_op
+            identifier: field_review_status_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administratror: '0'
+              grantee: '0'
+              analyst: '0'
+              specialist: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: workflow_state
       sorts:
         created:
           id: created
@@ -490,7 +725,17 @@ display:
       title: Dashboard
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        http_status_code:
+          id: http_status_code
+          table: views
+          field: http_status_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          status_code: 404
+          plugin_id: http_status_code
       relationships:
         field_review_status_tid:
           id: field_review_status_tid
@@ -502,40 +747,55 @@ display:
           required: true
           entity_type: node
           plugin_id: standard
+        field_assign_to:
+          id: field_assign_to
+          table: workflow_transition__field_assign_to
+          field: field_assign_to
+          relationship: field_review_status_tid
+          group_type: group
+          admin_label: 'field_assign_to: User'
+          required: false
+          plugin_id: standard
+        uid:
+          id: uid
+          table: workflow_transition_history
+          field: uid
+          relationship: field_review_status_tid
+          group_type: group
+          admin_label: User
+          required: false
+          entity_type: workflow_transition
+          entity_field: uid
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
       group_by: false
+      use_ajax: true
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.workflow_transition.field_assign_to'
         - 'config:field.storage.workflow_transition.field_compliance'
-  block_1:
+  block_2:
     display_plugin: block
-    id: block_1
-    display_title: Block
+    id: block_2
+    display_title: 'Block 2'
     position: 1
     display_options:
       display_extenders: {  }
-      access:
-        type: perm
-        options:
-          perm: 'create internal_status workflow_transition'
-      defaults:
-        access: false
-        arguments: false
       arguments:
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
+        field_assign_to_target_id:
+          id: field_assign_to_target_id
+          table: workflow_transition__field_assign_to
+          field: field_assign_to_target_id
+          relationship: field_review_status_tid
           group_type: group
           admin_label: ''
           default_action: default
@@ -543,10 +803,12 @@ display:
             value: all
             title_enable: false
             title: All
-          title_enable: false
-          title: ''
-          default_argument_type: current_user
-          default_argument_options: {  }
+          title_enable: true
+          title: 'Reports assigned'
+          default_argument_type: raw
+          default_argument_options:
+            index: 1
+            use_alias: false
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -564,9 +826,27 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          entity_type: node
-          entity_field: uid
           plugin_id: numeric
+      defaults:
+        arguments: false
+        filters: false
+        filter_groups: false
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: 0
       contexts:
@@ -574,7 +854,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -592,11 +871,13 @@ display:
         type: normal
         title: Dashboard
         menu_name: main
+        weight: -50
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions

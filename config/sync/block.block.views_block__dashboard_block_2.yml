@@ -1,0 +1,31 @@
+uuid: 3283b73e-d742-490b-a07a-90ea4d3a8d97
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dashboard
+  module:
+    - system
+    - views
+  theme:
+    - femagrants
+id: views_block__dashboard_block_2
+theme: femagrants
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:dashboard-block_2'
+settings:
+  id: 'views_block:dashboard-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

@@ -11,7 +11,7 @@ _core:
 id: femagrants_messages
 theme: femagrants
 region: highlighted
-weight: 0
+weight: -8
 provider: null
 plugin: system_messages_block
 settings:

@@ -1,0 +1,19 @@
+uuid: 5c82a9f1-5cb8-4b7f-b936-b0296a750d3d
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content: {  }
+hidden:
+  member_for: true
