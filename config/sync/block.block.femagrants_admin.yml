@@ -13,7 +13,7 @@ _core:
 id: femagrants_admin
 theme: femagrants
 region: sidebar_first
-weight: 1
+weight: -6
 provider: null
 plugin: 'system_menu_block:admin'
 settings:

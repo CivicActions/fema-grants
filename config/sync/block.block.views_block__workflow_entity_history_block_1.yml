@@ -1,0 +1,33 @@
+uuid: 60926a9d-baff-4d73-a91a-b9fbf02864b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.workflow_entity_history
+  module:
+    - node
+    - views
+  theme:
+    - femagrants
+id: views_block__workflow_entity_history_block_1
+theme: femagrants
+region: help
+weight: -7
+provider: null
+plugin: 'views_block:workflow_entity_history-block_1'
+settings:
+  id: 'views_block:workflow_entity_history-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      report: report
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
