@@ -31,4 +31,7 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_grantee_contact: true
+  field_grantid: true
+  field_organization: true

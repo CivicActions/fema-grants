@@ -37,7 +37,7 @@ if [[ "$(drush core-status --field=bootstrap | sed 's/[^a-zA-Z]*//g')" == "Succe
 else
 	echo "Installing Drupal"
   chown -R www-data:www-data /var/www
-	su www-data -c'/var/www/vendor/bin/drush -y site:install minimal --account-pass=civicactions --sites-subdir=default --db-url=mysql://dbuser:dbpass@db:3306/drupal --config-dir=/var/www/config/sync'
+	su www-data -c'bash /drupal-install.sh'
 fi
 
 exec /usr/local/bin/docker-php-entrypoint apache2-foreground
