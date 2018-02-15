@@ -8,18 +8,17 @@ services:
       - MYSQL_PASSWORD=dbpass
       - MYSQL_DATABASE=drupal
     networks:
-      - db
+      - web
   drupal:
     image: civicactions/fema-grants
     links:
       - db
     labels:
       - "traefik.backend=web"
+      - "traefik.port=80"
       - "traefik.frontend.rule=Host:drupal.${DOCKER_MACHINE_NAME}"
     networks:
       - web
-      - db
 networks:
   web:
     external: true
-  db:

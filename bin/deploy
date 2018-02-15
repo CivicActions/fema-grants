@@ -41,6 +41,14 @@ for PREFIX in '' '*.'; do
 	docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli -t A addrecord "${PREFIX}${SUBDOMAIN}" "${IP}"
 done
 
+echo "[deploy] Increasing vm.max_map_count on server for ElasticSearch"
+docker-machine ssh "${NAME}" sudo sysctl -w vm.max_map_count=262144
+
+echo "[deploy] Configuring Docker central logging to Graylog"
+docker-machine ssh "${NAME}" 'echo "{\"log-driver\": \"gelf\",\"log-opts\": {\"gelf-address\": \"udp://127.0.0.1:12201\"}}" | sudo tee /etc/docker/daemon.json'
+docker-machine ssh "${NAME}" 'sudo systemctl restart docker.service'
+sleep 10
+
 eval "$(docker-machine env "${NAME}")"
 echo "[deploy] Configuring Docker networking."
 if [ "$(docker network inspect web -f '{{ .Name }}')" != "web" ]; then
