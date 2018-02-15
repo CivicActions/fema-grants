@@ -1,0 +1,19 @@
+uuid: 209e5750-2bfd-477b-938b-a48e74bdb110
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_04_1_ein
+    - node.type.report
+id: node.report.field_04_1_ein
+field_name: field_04_1_ein
+entity_type: node
+bundle: report
+label: '4b. EIN'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

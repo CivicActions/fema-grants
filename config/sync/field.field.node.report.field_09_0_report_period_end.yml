@@ -1,0 +1,19 @@
+uuid: 209e5750-2bfd-477b-938b-a48e74bdb596
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_09_0_report_period_end
+    - node.type.report
+id: node.report.field_09_0_report_period_end
+field_name: field_09_0_report_period_end
+entity_type: node
+bundle: report
+label: '9. Reporting Period End Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
