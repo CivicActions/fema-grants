@@ -2103,17 +2103,17 @@
     },
     {
         "name": "drupal/console",
-        "version": "1.5.0",
-        "version_normalized": "1.5.0.0",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/hechoendrupal/drupal-console.git",
-            "reference": "e468cbefc4f157644e4affcfae1a8198a30c87a1"
+            "reference": "05812d093aa61bb492468a8de8b1a3aa2ba85b31"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/hechoendrupal/drupal-console/zipball/e468cbefc4f157644e4affcfae1a8198a30c87a1",
-            "reference": "e468cbefc4f157644e4affcfae1a8198a30c87a1",
+            "url": "https://api.github.com/repos/hechoendrupal/drupal-console/zipball/05812d093aa61bb492468a8de8b1a3aa2ba85b31",
+            "reference": "05812d093aa61bb492468a8de8b1a3aa2ba85b31",
             "shasum": ""
         },
         "require": {
@@ -2121,7 +2121,7 @@
             "composer/installers": "~1.0",
             "doctrine/annotations": "^1.2",
             "doctrine/collections": "^1.3",
-            "drupal/console-core": "1.5.0",
+            "drupal/console-core": "1.6.0",
             "drupal/console-dotenv": "~0",
             "drupal/console-extend-plugin": "~0",
             "gabordemooij/redbean": "~4.3",
@@ -2131,9 +2131,10 @@
             "symfony/css-selector": "~2.8|~3.0",
             "symfony/dom-crawler": "~2.8|~3.0",
             "symfony/expression-language": "~2.8|~3.0",
-            "symfony/http-foundation": "~2.8|~3.0"
+            "symfony/http-foundation": "~2.8|~3.0",
+            "symfony/thanks": "^1.0"
         },
-        "time": "2018-01-11T19:47:57+00:00",
+        "time": "2018-02-13T04:54:34+00:00",
         "bin": [
             "bin/drupal"
         ],
@@ -2146,7 +2147,7 @@
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -2160,10 +2161,6 @@
                 "homepage": "http://jmolivas.com"
             },
             {
-                "name": "Drupal Console Contributors",
-                "homepage": "https://github.com/hechoendrupal/DrupalConsole/graphs/contributors"
-            },
-            {
                 "name": "Eduardo Garcia",
                 "email": "enzo@enzolutions.com",
                 "homepage": "http://enzolutions.com/"
@@ -2171,6 +2168,10 @@
             {
                 "name": "Omar Aguirre",
                 "email": "omersguchigu@gmail.com"
+            },
+            {
+                "name": "Drupal Console Contributors",
+                "homepage": "https://github.com/hechoendrupal/drupal-console/graphs/contributors"
             }
         ],
         "description": "The Drupal CLI. A tool to generate boilerplate code, interact with and debug Drupal.",
@@ -2184,22 +2185,22 @@
     },
     {
         "name": "drupal/console-core",
-        "version": "1.5.0",
-        "version_normalized": "1.5.0.0",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/hechoendrupal/drupal-console-core.git",
-            "reference": "968b76e00011c3c0162e2df70ddc023b0daaa69b"
+            "reference": "f998ed792fbe35a8968dde7c169a9ba6bea04d50"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/hechoendrupal/drupal-console-core/zipball/968b76e00011c3c0162e2df70ddc023b0daaa69b",
-            "reference": "968b76e00011c3c0162e2df70ddc023b0daaa69b",
+            "url": "https://api.github.com/repos/hechoendrupal/drupal-console-core/zipball/f998ed792fbe35a8968dde7c169a9ba6bea04d50",
+            "reference": "f998ed792fbe35a8968dde7c169a9ba6bea04d50",
             "shasum": ""
         },
         "require": {
             "dflydev/dot-access-configuration": "^1.0",
-            "drupal/console-en": "1.5.0",
+            "drupal/console-en": "1.6.0",
             "php": "^5.5.9 || ^7.0",
             "stecman/symfony-console-completion": "~0.7",
             "symfony/config": "~2.8|~3.0",
@@ -2216,7 +2217,7 @@
             "webflo/drupal-finder": "^1.0",
             "webmozart/path-util": "^2.3"
         },
-        "time": "2018-01-11T19:30:16+00:00",
+        "time": "2018-02-13T00:57:59+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -2229,7 +2230,7 @@
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -2308,25 +2309,25 @@
     },
     {
         "name": "drupal/console-en",
-        "version": "1.5.0",
-        "version_normalized": "1.5.0.0",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/hechoendrupal/drupal-console-en.git",
-            "reference": "85317ff8319b58c3a0295b4cb74221b7c3c7ddf4"
+            "reference": "5f072c75e71338aacda9865cb99466c5822f403e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/hechoendrupal/drupal-console-en/zipball/85317ff8319b58c3a0295b4cb74221b7c3c7ddf4",
-            "reference": "85317ff8319b58c3a0295b4cb74221b7c3c7ddf4",
+            "url": "https://api.github.com/repos/hechoendrupal/drupal-console-en/zipball/5f072c75e71338aacda9865cb99466c5822f403e",
+            "reference": "5f072c75e71338aacda9865cb99466c5822f403e",
             "shasum": ""
         },
-        "time": "2018-01-11T18:09:24+00:00",
+        "time": "2018-02-12T19:40:11+00:00",
         "type": "drupal-console-language",
         "installation-source": "dist",
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -3624,6 +3625,72 @@
             "league",
             "provider",
             "service"
+        ]
+    },
+    {
+        "name": "league/csv",
+        "version": "9.1.2",
+        "version_normalized": "9.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/thephpleague/csv.git",
+            "reference": "90bedd96fa3e3d2a988be985b9b1ee29cdb38301"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/thephpleague/csv/zipball/90bedd96fa3e3d2a988be985b9b1ee29cdb38301",
+            "reference": "90bedd96fa3e3d2a988be985b9b1ee29cdb38301",
+            "shasum": ""
+        },
+        "require": {
+            "ext-mbstring": "*",
+            "php": ">=7.0.10"
+        },
+        "require-dev": {
+            "ext-curl": "*",
+            "friendsofphp/php-cs-fixer": "^2.0",
+            "phpunit/phpunit": "^6.0"
+        },
+        "suggest": {
+            "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters"
+        },
+        "time": "2018-02-05T14:07:11+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "9.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "League\\Csv\\": "src"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ignace Nyamagana Butera",
+                "email": "nyamsprod@gmail.com",
+                "homepage": "https://github.com/nyamsprod/",
+                "role": "Developer"
+            }
+        ],
+        "description": "Csv data manipulation made easy in PHP",
+        "homepage": "http://csv.thephpleague.com",
+        "keywords": [
+            "csv",
+            "export",
+            "filter",
+            "import",
+            "read",
+            "write"
         ]
     },
     {
@@ -6761,6 +6828,51 @@
         ],
         "description": "Symfony Serializer Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/thanks",
+        "version": "v1.0.5",
+        "version_normalized": "1.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/thanks.git",
+            "reference": "c757ee0c9dcfcc0e9e30fbbbdcadeb9dcc9aaaf4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/thanks/zipball/c757ee0c9dcfcc0e9e30fbbbdcadeb9dcc9aaaf4",
+            "reference": "c757ee0c9dcfcc0e9e30fbbbdcadeb9dcc9aaaf4",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0",
+            "php": "^5.5.9|^7.0.0"
+        },
+        "time": "2018-01-26T10:44:34+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            },
+            "class": "Symfony\\Thanks\\Thanks"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Thanks\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            }
+        ],
+        "description": "Give thanks (in the form of a GitHub ⭐) to your fellow PHP package maintainers (not limited to Symfony components)!"
     },
     {
         "name": "symfony/translation",

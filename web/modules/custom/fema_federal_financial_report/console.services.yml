@@ -1,0 +1,7 @@
+services:
+  fema_federal_financial_report.fema_federal_financial_report_generate_report_fields:
+    class: Drupal\fema_federal_financial_report\Command\GenerateReportFieldsCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+

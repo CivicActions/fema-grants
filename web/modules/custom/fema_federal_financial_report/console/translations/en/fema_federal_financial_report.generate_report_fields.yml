@@ -1,0 +1,5 @@
+description: 'Generates the yaml configuraiton for fields related to the report content type.'
+options: {}
+arguments: {}
+messages:
+    success: 'All field were generated.'

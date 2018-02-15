@@ -12,6 +12,7 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  fema_federal_financial_report: 0
   field: 0
   field_layout: 0
   field_ui: 0

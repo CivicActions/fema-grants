@@ -15,19 +15,19 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-          "type": "package",
-          "package": {
-            "name": "harvesthq/chosen",
-            "version": "1.7.0",
-            "type": "drupal-library",
-            "dist": {
-              "url": "https://github.com/harvesthq/chosen/releases/download/v1.7.0/chosen_v1.7.0.zip",
-              "type": "zip"
-            },
-            "require": {
-              "composer/installers": "^1.2.0"
+            "type": "package",
+            "package": {
+                "name": "harvesthq/chosen",
+                "version": "1.7.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.7.0/chosen_v1.7.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                  "composer/installers": "^1.2.0"
+                }
             }
-          }
         }
     ],
     "require": {
@@ -43,6 +43,7 @@
         "drupal/workflow": "^1.0",
         "drush/drush": "^9.0.0",
         "harvesthq/chosen": "^1.7",
+        "league/csv": "^9.0.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
     },
