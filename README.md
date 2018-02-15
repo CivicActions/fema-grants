@@ -11,6 +11,8 @@ docker-compose up -d
 
 The site should now be accessible on http://localhost:8118 - default credentials are admin/civicactions.
 
+There can be a small delay (a couple of minutes) after `docker-compose up -d` is finished before the site is available. During this time, don't run any drush commands.
+
 To stop the sandbox run:
 ```
 docker-compose stop
