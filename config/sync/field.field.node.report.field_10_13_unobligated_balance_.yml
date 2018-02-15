@@ -1,0 +1,19 @@
+uuid: 209e5750-2bfd-477b-938b-a48e74bdb395
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10_13_unobligated_balance_
+    - node.type.report
+id: node.report.field_10_13_unobligated_balance_
+field_name: field_10_13_unobligated_balance_
+entity_type: node
+bundle: report
+label: 'h. Unobligated balance of Federal Funds (line d minus g)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

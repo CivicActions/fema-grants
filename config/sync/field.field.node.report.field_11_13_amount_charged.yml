@@ -1,0 +1,19 @@
+uuid: 209e5750-2bfd-477b-938b-a48e74bdb862
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11_13_amount_charged
+    - node.type.report
+id: node.report.field_11_13_amount_charged
+field_name: field_11_13_amount_charged
+entity_type: node
+bundle: report
+label: 'Amount Charged'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

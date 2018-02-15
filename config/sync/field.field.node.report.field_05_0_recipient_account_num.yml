@@ -1,0 +1,19 @@
+uuid: 209e5750-2bfd-477b-938b-a48e74bdb238
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_05_0_recipient_account_num
+    - node.type.report
+id: node.report.field_05_0_recipient_account_num
+field_name: field_05_0_recipient_account_num
+entity_type: node
+bundle: report
+label: '5. Recipient Account Number or Identifying Number (To report multiple grants, use FFR Attachment)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

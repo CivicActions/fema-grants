@@ -2,6 +2,7 @@
 
 namespace Drupal\fema_federal_financial_report\Command;
 
+use Drupal\Core\Config\Config;
 use League\Csv\Reader;
 use League\Csv\Statement;
 use Symfony\Component\Console\Input\InputInterface;
@@ -39,15 +40,21 @@ class GenerateReportFieldsCommand extends ContainerAwareCommand
     return $this->weight - 1;
   }
 
-  private function getUUID()
+  private function getUUID(Config $config)
   {
-    return "209e5750-2bfd-477b-938b-a48e74bdb" . rand(100, 999);
+    $uuid = $config->get("uuid");
+    if (empty($uuid)) {
+      $uuid = "209e5750-2bfd-477b-938b-a48e74bdb" . rand(100, 999);
+    }
+    return $uuid;
   }
 
-  private function generateFieldDefinition($field_name, $label, $required)
-  {
+  private function generateFieldDefinition($field_name, $label, $required) {
+    /* @var $config \Drupal\Core\Config\Config */
+    $config = \Drupal::service('config.factory')->getEditable("field.field.node.report.field_{$field_name}");
+
     $definition = [
-      "uuid" => $this->getUUID(),
+      "uuid" => $this->getUUID($config),
       "langcode" => "en",
       "status" => true,
       "dependencies" => [
@@ -70,17 +77,16 @@ class GenerateReportFieldsCommand extends ContainerAwareCommand
       "field_type" => "string",
     ];
 
-    /* @var $config \Drupal\Core\Config\Config */
-    $config = \Drupal::service('config.factory')->getEditable("field.field.node.report.field_{$field_name}");
     $config->setData($definition);
     $config->save();
   }
 
-  private function generateFieldStorage($field_name, $max_length, $cardinality)
-  {
+  private function generateFieldStorage($field_name, $max_length, $cardinality) {
+    /* @var $config \Drupal\Core\Config\Config */
+    $config = \Drupal::service('config.factory')->getEditable("field.storage.node.field_{$field_name}");
 
     $storage = [
-      "uuid" => $this->getUUID(),
+      "uuid" => $this->getUUID($config),
       "langcode" => "en",
       "status" => "true",
       "dependencies" => [
@@ -104,8 +110,6 @@ class GenerateReportFieldsCommand extends ContainerAwareCommand
       "custom_storage" => false,
     ];
 
-    /* @var $config \Drupal\Core\Config\Config */
-    $config = \Drupal::service('config.factory')->getEditable("field.storage.node.field_{$field_name}");
     $config->setData($storage);
     $config->save();
   }
@@ -215,7 +219,11 @@ class GenerateReportFieldsCommand extends ContainerAwareCommand
   }
 
   private function getLabel($record) {
-    return $record[2];
+    $label = trim($record[2]);
+    if (empty($label)) {
+      $label = trim($record[1]);
+    }
+    return $label;
   }
 
   private function createFieldName($record) {
