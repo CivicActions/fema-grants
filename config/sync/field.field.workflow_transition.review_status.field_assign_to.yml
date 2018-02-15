@@ -18,7 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:user'
   handler_settings:
-    include_anonymous: true
+    include_anonymous: false
     filter:
       type: role
       role:
