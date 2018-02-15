@@ -20,4 +20,5 @@ COPY . /var/www
 
 # Custom entrypoint.
 COPY .docker/docker-entrypoint.sh /
+COPY .docker/drupal-install.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
