@@ -1,5 +1,6 @@
 version: '3'
 services:
+  # Traefik: https://docs.traefik.io/
   proxy:
     image: traefik
     labels:
@@ -30,17 +31,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /dev/null:/traefik.toml
       - traefik_acme:/acme/
-  jenkins:
-    image: jenkins/jenkins:lts
-    labels:
-      - "traefik.backend=jenkins"
-      - "traefik.port=8080"
-      - "traefik.frontend.rule=Host:jenkins.${DOCKER_MACHINE_NAME}"
-    networks:
-      - web
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - jenkins_home:/var/jenkins_home
   # Drone: http://readme.drone.io/admin/installation-guide/
   drone-server:
     image: drone/drone:0.8
@@ -113,6 +103,5 @@ networks:
   web:
     external: true
 volumes:
-  jenkins_home:
   traefik_acme:
   drone:
