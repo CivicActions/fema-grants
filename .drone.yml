@@ -1,11 +1,14 @@
 workspace:
-  base: /var
-  path: www
+  base: /drone/src
+  path: ../../var/www
 
 pipeline:
   test:
     image: civicactions/fema-grants:latest
     commands:
+      - mount
+      - ls -la /var/www/vendor/bin
+      - exit 1
       - sleep 20
       - timeout 300 bash -c 'until curl -m1 -s http://web > /dev/null; do sleep 0.5; done'
       - drush --root=/var/www/docroot core:status
