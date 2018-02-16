@@ -4,15 +4,21 @@ status: true
 dependencies:
   module:
     - node
+    - options
 id: node.field_07_0_basis_of_accounting
 field_name: field_07_0_basis_of_accounting
 entity_type: node
-type: string
+type: list_string
 settings:
-  max_length: 1
-  is_ascii: false
-  case_sensitive: false
-module: core
+  allowed_values:
+    -
+      value: Cash
+      label: Cash
+    -
+      value: Accrual
+      label: Accrual
+  allowed_values_function: ''
+module: options
 locked: false
 cardinality: 1
 translatable: true

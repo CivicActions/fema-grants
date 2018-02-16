@@ -62,6 +62,7 @@ dependencies:
     - node.type.report
   module:
     - field_layout
+    - file
     - layout_discovery
     - path
     - workflow
@@ -194,19 +195,15 @@ content:
     region: content
   field_06_0_report_type:
     weight: 15
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+    type: options_select
     region: content
   field_07_0_basis_of_accounting:
     weight: 16
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+    type: options_select
     region: content
   field_08_0_projectgrant_period_f:
     weight: 17
@@ -435,10 +432,9 @@ content:
   field_12_1_remarks:
     weight: 45
     settings:
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: string_textfield
+    type: file_generic
     region: content
   field_13_1_1_prefix:
     weight: 46
