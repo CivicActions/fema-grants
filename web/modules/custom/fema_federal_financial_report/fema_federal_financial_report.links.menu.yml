@@ -1,0 +1,17 @@
+fema_fedearal_financial_report.admin-1:
+  title: 'Add A SF-425 Report'
+  description: 'Create a new SF-425 Report'
+  parent: main
+  menu_name: main
+  url: internal:/node/add/report
+  weight: 200
+
+fema_fedearal_financial_report.admin-2:
+  title: 'Privacy Policies'
+  description: 'Privacy Policies'
+  parent: main
+  menu_name: main
+  url: internal:/node/1
+  weight: 200
+
+
