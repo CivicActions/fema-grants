@@ -201,11 +201,10 @@ content:
   field_07_0_basis_of_accounting:
     weight: 231
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
-    region: content
+    type: list_default
+    region: first
   field_08_0_projectgrant_period_f:
     weight: 233
     label: above
