@@ -2,8 +2,8 @@ pipeline:
   web:
     image: civicactions/fema-grants
     commands:
-      - su www-data -c'drush st'
-      - su www-data -c'phpunit --testsuite=unit --exclude-group=DependencyInjection,Composer'
+      - drush st
+      - cd /var/www/web/core && phpunit --testsuite=unit --exclude-group=DependencyInjection,Composer
 
 services:
   db:
