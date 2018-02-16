@@ -9,7 +9,7 @@ services:
       - MYSQL_DATABASE=drupal
     networks:
       - web
-  drupal:
+  web:
     image: civicactions/fema-grants
     links:
       - db
