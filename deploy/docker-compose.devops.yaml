@@ -41,6 +41,37 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins_home:/var/jenkins_home
+  # Drone: http://readme.drone.io/admin/installation-guide/
+  drone-server:
+    image: drone/drone:0.8
+    labels:
+      - "traefik.backend=drone-server"
+      - "traefik.port=8000"
+      - "traefik.frontend.rule=Host:drone.${DOCKER_MACHINE_NAME}"
+    networks:
+      - web
+    volumes:
+      - drone:/var/lib/drone/
+    restart: always
+    environment:
+      - DRONE_OPEN=true
+      - DRONE_HOST
+      - DRONE_GITHUB=true
+      - DRONE_GITHUB_CLIENT
+      - DRONE_GITHUB_SECRET
+      - DRONE_SECRET
+  drone-agent:
+    image: drone/agent:0.8
+    command: agent
+    restart: always
+    depends_on: [ drone-server ]
+    networks:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DRONE_SERVER=drone-server:9000
+      - DRONE_SECRET
   # Graylog: https://hub.docker.com/r/graylog/graylog/
   graylog:
     image: graylog/graylog:2.4.3-1
@@ -84,3 +115,4 @@ networks:
 volumes:
   jenkins_home:
   traefik_acme:
+  drone:
