@@ -1,19 +1,22 @@
 workspace:
-  base: /drone/src
-  path: ../../var/www
+  base: /app
+  path: src
 
 pipeline:
   test:
-    image: civicactions/fema-grants:latest
+    image: fema-grants:latest
     commands:
-      - mount
-      - ls -la /var/www/vendor/bin
-      - exit 1
       - sleep 20
       - timeout 300 bash -c 'until curl -m1 -s http://web > /dev/null; do sleep 0.5; done'
-      - drush --root=/var/www/docroot core:status
-      - /var/www/vendor/bin/behat -c /var/www/tests/behat.yml
-      - cd /var/www/web/core && phpunit --testsuite=unit --exclude-group=DependencyInjection,Composer
+      - drush --root=/app/src/docroot core:status
+      - /app/src/vendor/bin/behat -c /app/src/tests/behat.yml
+      - cd /app/src/web/core && phpunit --testsuite=unit --exclude-group=DependencyInjection,Composer
+  slack:
+    image: plugins/slack
+    channel: proposal-fema
+    secrets: [ slack_webhook ]
+    when:
+      status: [ success, failure ]
 
 services:
   db:
@@ -24,12 +27,4 @@ services:
       - MYSQL_PASSWORD=dbpass
       - MYSQL_DATABASE=drupal
   web:
-    image: civicactions/fema-grants:latest
-
-pipeline:
-  slack:
-    image: plugins/slack
-    channel: proposal-fema
-    secrets: [ slack_webhook ]
-    when:
-      status: [ success, failure ]
+    image: fema-grants:latest

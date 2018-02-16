@@ -1,9 +1,9 @@
 #!/bin/bash -e
 set -e
-DRUSH=/var/www/vendor/bin/drush
+DRUSH=/app/src/vendor/bin/drush
 
 echo "Installing Drupal"
-$DRUSH -y site:install minimal --account-pass=civicactions --sites-subdir=default --db-url=mysql://dbuser:dbpass@db:3306/drupal --config-dir=/var/www/config/sync
+$DRUSH -y site:install minimal --account-pass=civicactions --sites-subdir=default --db-url=mysql://dbuser:dbpass@db:3306/drupal --config-dir=/app/src/config/sync
 
 echo "Importing Configuration"
 $DRUSH -y config-import

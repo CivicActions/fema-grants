@@ -10,7 +10,7 @@ services:
   web:
     image: civicactions/fema-grants
     volumes:
-      - .:/var/www
+      - .:/app/src
     links:
       - db
     ports:
