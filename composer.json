@@ -40,6 +40,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.4",
         "drupal/default_content": "^1.0@alpha",
+        "drupal/drupal-extension": "~3.0",
         "drupal/uswds": "^1.0@beta",
         "drupal/workflow": "^1.0",
         "drush/drush": "^9.0.0",

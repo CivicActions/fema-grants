@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker-compose exec --user www-data web /var/www/vendor/bin/behat -c /var/www/tests/behat.yml $@
