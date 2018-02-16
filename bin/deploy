@@ -13,7 +13,6 @@ SUBDOMAIN="$1"
 DOMAIN="$2"
 # Create host NAME combining subdomain+domain.
 NAME="${SUBDOMAIN}.${DOMAIN}"
-AWS='docker run --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_VPC_ID -e AWS_DEFAULT_REGION -e AWS_ZONE -e AWS_SUBNET_ID anigeo/awscli'
 
 EXISTS=$(docker-machine ls -t "2" -q --filter name="${NAME}")
 if [ "$EXISTS" = "" ]; then
@@ -30,6 +29,7 @@ else
 fi
 
 echo "[deploy] Managing AWS security groups."
+AWS='docker run --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_VPC_ID -e AWS_DEFAULT_REGION -e AWS_ZONE -e AWS_SUBNET_ID anigeo/awscli'
 ${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
 ${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
 ${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol tcp --port 443 --cidr 0.0.0.0/0
@@ -56,5 +56,10 @@ if [ "$(docker network inspect web -f '{{ .Name }}')" != "web" ]; then
 fi
 echo "[deploy] Installing DevOps services."
 docker-compose -f deploy/docker-compose.devops.yaml up -d
+
+echo "[deploy] Adding Slack webhook secret to Drone."
+DRONE='docker run --rm -e DRONE_SERVER -e DRONE_TOKEN drone/cli'
+$DRONE secret rm -repository CivicActions/fema-grants -name slack_webhook                                                                                                                      
+$DRONE secret add -repository CivicActions/fema-grants -name slack_webhook -image plugins/slack -event push -event pull_request -value $SLACK_WEBHOOK 
 
 echo "[deploy] Deploy success." 

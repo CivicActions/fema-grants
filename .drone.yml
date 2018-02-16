@@ -1,0 +1,23 @@
+pipeline:
+  web:
+    image: civicactions/fema-grants
+    commands:
+      - drush st
+      - cd /var/www/web/core && phpunit --testsuite=unit --exclude-group=DependencyInjection,Composer
+
+services:
+  db:
+    image: mariadb:10.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbpass
+      - MYSQL_DATABASE=drupal
+
+pipeline:
+  slack:
+    image: plugins/slack
+    channel: proposal-fema
+    secrets: [ slack_webhook ]
+    when:
+      status: [ success, failure ]
