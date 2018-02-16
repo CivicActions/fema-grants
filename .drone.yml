@@ -1,8 +1,15 @@
+workspace:
+  base: /var
+  path: www
+
 pipeline:
-  web:
-    image: civicactions/fema-grants
+  test:
+    image: civicactions/fema-grants:latest
     commands:
-      - drush st
+      - sleep 20
+      - timeout 300 bash -c 'until curl -m1 -s http://web > /dev/null; do sleep 0.5; done'
+      - drush --root=/var/www/docroot core:status
+      - /var/www/vendor/bin/behat -c /var/www/tests/behat.yml
       - cd /var/www/web/core && phpunit --testsuite=unit --exclude-group=DependencyInjection,Composer
 
 services:
@@ -13,6 +20,8 @@ services:
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=dbpass
       - MYSQL_DATABASE=drupal
+  web:
+    image: civicactions/fema-grants:latest
 
 pipeline:
   slack:

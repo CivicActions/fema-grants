@@ -7,7 +7,7 @@ default:
   extensions:
     Behat\MinkExtension:
       goutte: ~
-      base_url: http://localhost:80/  # Replace with your site's URL
+      base_url: http://web:80/  # Replace with your site's URL
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: "drupal"
