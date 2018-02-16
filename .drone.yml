@@ -4,7 +4,7 @@ workspace:
 
 pipeline:
   test:
-    image: fema-grants:latest
+    image: civicactions/fema-grants:latest
     commands:
       - sleep 20
       - timeout 300 bash -c 'until curl -m1 -s http://web > /dev/null; do sleep 0.5; done'
@@ -27,4 +27,4 @@ services:
       - MYSQL_PASSWORD=dbpass
       - MYSQL_DATABASE=drupal
   web:
-    image: fema-grants:latest
+    image: civicactions/fema-grants:latest
