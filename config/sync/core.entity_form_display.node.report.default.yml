@@ -194,11 +194,9 @@ content:
     region: content
   field_06_0_report_type:
     weight: 15
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+    type: options_select
     region: content
   field_07_0_basis_of_accounting:
     weight: 16
