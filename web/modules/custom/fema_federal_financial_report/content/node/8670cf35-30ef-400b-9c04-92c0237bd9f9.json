@@ -1,0 +1,156 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/privacy?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/basic_page"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/basic_page\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/basic_page\/uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "8670cf35-30ef-400b-9c04-92c0237bd9f9"
+        }
+    ],
+    "vid": [
+        {
+            "value": 8
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic_page"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-02-15T20:35:15+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/basic_page\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "139316ca-ac63-4e9a-b272-18242b0681f6"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/basic_page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "139316ca-ac63-4e9a-b272-18242b0681f6"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Privacy Policies",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-02-15T20:31:53+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-02-15T20:35:15+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/privacy",
+            "pid": 1,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>This page explains the privacy policy for our digital communication channels including fema.gov, text messages, and the smartphone app.<\/p>\r\n\r\n<p>This website is provided as a public service by the Federal Emergency Management Agency (FEMA). Information presented on this site is considered public information and may be distributed or copied. Use of appropriate byline\/photo\/image credits is requested.<\/p>\r\n\r\n<p>For more information, please contact FEMA-Privacy@fema.dhs.gov.<\/p>\r\n\r\n<p><strong>Information Collected And Stored Automatically<\/strong><\/p>\r\n\r\n<p>The information we learn about you from your visit to our website depends upon what functions you perform when visiting our site.<br \/>\r\nFor site management, information is collected for statistical purposes. This government computer system uses software programs to create summary statistics, which are used for such purposes as assessing what information is of most and least interest, determining technical design specifications, and identifying system performance or problem areas.<br \/>\r\nIf you do nothing during your visit but browse through the website, read pages, or download information, we will gather and store certain information about your visit automatically. This information does not identify you personally. We automatically collect and store the following information about your visit:<\/p>\r\n\r\n<ul>\r\n\t<li>The Internet domain (for example, \"xcompany.com\" if you use a private Internet access account, or \"yourschool.edu\" if you connect from a university's domain) and IP address (an IP address is a number that is automatically assigned to your computer whenever you are surfing the Web) from which you access our website;<\/li>\r\n\t<li>The type of browser and operating system used to access our site;<\/li>\r\n\t<li>The date and time you access our site;<\/li>\r\n\t<li>The pages you visit; and<\/li>\r\n\t<li>If you linked to the FEMA website from another website, the address of that website.<\/li>\r\n\t<li>We use this information to help us make our site more useful to visitors -- to learn about the number of visitors to our site and the types of technology our visitors use. We do not track or record information about individuals and their visits.<\/li>\r\n<\/ul>\r\n\r\n<p><strong>Children's Privacy<\/strong><\/p>\r\n\r\n<p>Certain areas of FEMA\u2019s website provide disaster-related educational content for children. &nbsp;FEMA is committed to complying with the Children\u2019s Online Privacy Protection Act and does not use its website to collect personal information from children under the age of 13 years old. &nbsp;In instances where a child under the age of 13 submits a question or comment, FEMA will only use the child\u2019s e-mail address to respond to the inquiry and will delete the message in accordance with its approved records schedule. &nbsp;For more information, please contact: FEMA-Privacy@fema.dhs.gov.<\/p>\r\n\r\n<p><strong>Cookies<\/strong><\/p>\r\n\r\n<p>FEMA uses cookies on its websites solely to allow complex, software user-driven applications to function correctly. For example, FEMA's online ordering services for U.S. Fire Administration and the FEMA Flood Map Store publications allow users to shop through online catalogs. When a user \"checks off\" a publication, the transaction consists of a separate \"signal\" that is sent by the user's computer to FEMA's site. In order to maintain a complete record of the total order, the FEMA server sends a \"cookie\" back to the user's computer solely for the purposes of identifying that user's order. The only information collected during this process is related to that particular publication order. This information is not retained after the online order is sent or completed. FEMA's use of cookie technology is not otherwise designed, intended or used to collect, store or analyze information pertaining to Internet users.<\/p>\r\n\r\n<p><strong>Google Analytics<\/strong><\/p>\r\n\r\n<p>The Department of Homeland Security (DHS) has enabled Google Analytics on FEMA\u2019s Website(s). Google Analytics is a tool that helps the Department gather feedback using non-identifiable aggregated data such as number of unique visitors to a page and the navigation the visitor took to get to a specific piece of content. The Department will use this data to make modifications to the website to improve the user experience and monitor the traffic on the website.<\/p>\r\n\r\n<p>In order to use this tool, Google sets a cookie on your machine or device. While this cookie is set automatically, you may chose not to have the cookie placed on your machine or device without any modifications to the appearance or functionality of the website by following the instructions below. You may also delete the cookie at any time through the options tab on your browser also outlined below. The cookie monitors your navigation through the website and records: 1) what content was viewed; 2) how you arrived at the specific content; 3) your ISP provider including the ISP provider\u2019s geographic information; 4) the time spent viewing a specific piece of content; 5) the time spent on the entire website; 6) the path taken to access the website; and 7) the connection speed of the session. Google Analytics does not tell the Department who you are or allow the Department to determine your identity nor does the cookie monitor or record your web usage after you leave the Department\u2019s website(s). The data is automatically sent from the cookie on your machine or device to Google\u2019s system which immediately aggregates the data. Neither the Department nor Google will ever have access to the specifics of your particular session. What the Department will see is the aggregate data from all users for a particular time period.<\/p>\r\n\r\n<p>The Department is gathering this information for internal purposes and has chosen to not share the aggregate data with Google. We may use the aggregated data to share with our partners and contractors to help improve the user experience. The Department will retain the aggregated data as long as required per our records retention policy.<\/p>\r\n\r\n<p>The Department has taken great efforts to protect your privacy. The DHS Privacy Office has conducted a Privacy Impact Assessment (PIA) specifically on how the use of Google Analytics impacts the privacy of visitors to the Department\u2019s website(s). Please visit the Privacy Office\u2019s website to view the PIA at http:\/\/dhs.gov.<\/p>\r\n\r\n<p>To opt out of having the cookie installed on your machine or device, you may need to adjust your internet browser\u2019s cookie settings. If you use multiple browsers on your machine or device, you will need to complete this process for each browser used. Please visit USA.gov for instructions for common browsers.<\/p>\r\n\r\n<p>If you have any questions about our use of Google Analytics please contact the DHS Office of Public Affairs.<\/p>\r\n\r\n<p><strong>Security And Intrusion Detection<\/strong><\/p>\r\n\r\n<p>Unauthorized attempts to defeat or circumvent security features, to use the system for other than intended purposes, to deny service to authorized users, to access, obtain, alter, damage, or destroy information, or otherwise to interfere with the system or its operation is prohibited. Evidence of such acts may be disclosed to law enforcement authorities and result in criminal prosecution under the Computer Fraud and Abuse Act of 1986 and the National Information Infrastructure Protection Act of 1996 (Pub. L. 104-294), (18 U.S.C. 1030), or other applicable criminal laws.<\/p>\r\n\r\n<p>For site security purposes and to ensure that this service remains available to all users, this government computer system employs software programs to monitor host and network traffic to identify unauthorized attempts to upload or change information, or otherwise cause damage.<\/p>\r\n\r\n<p>Except for authorized law enforcement investigations, no other attempts are made to identify individual users or their usage habits. Raw data logs are used for no other purposes and are scheduled for regular destruction in accordance with National Archives and Records Administration guidelines.<\/p>\r\n\r\n<p>Unauthorized attempts to upload information or change information on this service are strictly prohibited and may be punishable under the Computer Fraud and Abuse Act of 1986 and the National Information Infrastructure Protection Act.\"<br \/>\r\nThis section is Expanded. Click to CollapseFEMA Text Messages<\/p>\r\n\r\n<p>All FEMA text messages are sent from our dedicated number, which is 43362 (4FEMA).<\/p>\r\n\r\n<p>We will never charge you for text message alerts, but carrier message and data rates may apply. Your carrier may collect additional data elements, please see their privacy policies for further details.<\/p>\r\n\r\n<p>We will not use your phone number to track, reverse look up, or for any type of commercial marketing.<\/p>\r\n\r\n<p>Visit our text message page for basic commands and how to get started.<\/p>\r\n\r\n<p><strong>FEMA Smartphone App<\/strong><\/p>\r\n\r\n<p>By downloading the FEMA App, the user agrees to the following terms:<\/p>\r\n\r\n<p>FEMA will make all reasonable attempts to keep this App bug free and up \u2013to date. However, this App and all information, content, and materials included on or otherwise made available to you through this App are provided by FEMA on an \"as is\" and \"as available\" basis. FEMA makes no representations or warranties of any kind express or implied, as to the operation of this site or the information, content, or materials included on or otherwise made available to you through this App. You expressly agree that your use of this site is at your own risk. To the full extent permissible, by applicable Federal law, FEMA disclaim all warranties, express or implied, including, but not limited to, implied warranties of merchantability and fitness for a particular purpose. FEMA does not warrant that this App, information, content, or materials included on or otherwise made available to you through this App are free of viruses or other harmful components. FEMA will not be liable for any damages of any kind arising from the use of this App from any information, content, or materials, included on or otherwise made available to you through this App, including, but not limited to direct, indirect, incidental, punitive, and consequential damages.<\/p>\r\n\r\n<p>FEMA does not see, collect, or store any data you enter into the App. Any and all information you enter into the App is stored on your device and not on FEMA\u2019s website or server. As such, FEMA is not responsible for any damages resulting from the loss or theft of that information. &nbsp;However, please note that certain optional App features may transmit data.<\/p>\r\n\r\n<p>For the Disaster Reporter, the App only transmits photos\/texts uploaded by the user, along with geospatial coordinates; the App does not transmit any personal information (i.e., phone number, user\u2019s name) associated with your device.<\/p>\r\n\r\n<p>For the Weather Alerts, the App transmits location data (County and State) selected by the user and a unique device token ID to FEMA to allow for personalized weather alerts. The App does not transmit any personal information associated with the device.<\/p>\r\n\r\n<p>FEMA does use Bing Maps (FEMA does not endorse any non-Federal government entities or products) on this App. While Microsoft has advised FEMA that they do not collect any personal information, they do collect the number of times a map is accessed via the mapping feature on the FEMA App, This information is not shared with FEMA. FEMA is not responsible for any information collected by Microsoft.<\/p>\r\n\r\n<p>While FEMA does not charge for the use of this App normal carrier data fees may apply. Please consult your carrier to discuss any charges related to the use of this App.<br \/>\r\nFEMA is a Federal Government entity and as such does not endorse any non-Federal US Government entities. You may not use this App or any of the information in this App to imply that FEMA endorse you or your organization.<\/p>\r\n\r\n<p>This App should not be used to contact FEMA during an emergency. If you are in need of emergency assistance please contact 9-1-1. If you need to register for FEMA assistance please visit the FEMA mobile site at m.fema.gov.<\/p>\r\n\r\n<p><em>Last Updated: 09\/26\/2017 - 16:39<\/em><\/p>\r\n",
+            "format": "filtered_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

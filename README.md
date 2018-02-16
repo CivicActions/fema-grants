@@ -51,11 +51,10 @@ Always create a new branch to work on each user story or change.
 
 ### After you've done your coding work
 
-Make sure you export any configuration changes you've made to ensure that what you've done on your machine can be replicated on other machines.
-
-To do this, once you've done your code work, and before you submit a pull-request, make sure you do `drush -y config:export` and commit those results before you submit your pull-request.
-
-Not sure if all your changes work? Test your work by recreating your sandbox with your current code (see above).
+* Make sure you export any configuration changes you've made to ensure that what you've done on your machine can be replicated on other machines. Do this by running `drush -y config:export` and commit those results before you submit your pull-request.
+* If you have made changes to sample content or entity structures you should also update the sample content by running `drush dcem fema_federal_financial_report` and committing those results. It is expected that some timestamps will be updated when doing this.
+* If you have added sample content look up the entity uuids and add those to `web/modules/custom/fema_federal_financial_report/fema_federal_financial_report.info.yml` then run `drush dcem fema_federal_financial_report` and commit those results.
+* Not sure if all your changes work? Test your work by recreating your sandbox with your current code (see above).
 
 ## Docker image development
 
