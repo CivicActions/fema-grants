@@ -7,15 +7,15 @@ if [ "$HOST_USER" ]; then
   OWNER=$(echo $HOST_USER | cut -d: -f1)
   GROUP=$(echo $HOST_USER | cut -d: -f2)
 else
-  OWNER=$(stat -c '%u' /var/www)
-  GROUP=$(stat -c '%g' /var/www)
+  OWNER=$(stat -c '%u' /app/src)
+  GROUP=$(stat -c '%g' /app/src)
 fi
 if [ "$OWNER" != "0" ]; then
   usermod -o -u $OWNER www-data
   groupmod -o -g $GROUP www-data
 fi
 usermod -s /bin/bash www-data
-usermod -d /var/www www-data
+usermod -d /app/src www-data
 
 echo "The apache user and group has been set to the following:"
 id www-data
@@ -35,9 +35,9 @@ done
 if [[ "$(drush core-status --field=bootstrap | sed 's/[^a-zA-Z]*//g')" == "Successful" ]]; then
   echo "Drupal already installed"
 else
-	echo "Installing Drupal"
-  chown -R www-data:www-data /var/www
-	su www-data -c'bash /drupal-install.sh'
+  echo "Installing Drupal"
+  chown -R www-data:www-data /app/src
+  su www-data -c'bash /app/src/.docker/drupal-install.sh'
 fi
 
 exec /usr/local/bin/docker-php-entrypoint apache2-foreground
