@@ -1,18 +1,20 @@
-uuid: 209e5750-2bfd-477b-938b-a48e74bdb685
+uuid: 556d1f15-00c0-4ee2-9461-269bd3e52fdf
 langcode: en
 status: true
 dependencies:
   module:
+    - file
     - node
 id: node.field_12_1_remarks
 field_name: field_12_1_remarks
 entity_type: node
-type: string
+type: file
 settings:
-  max_length: 1
-  is_ascii: false
-  case_sensitive: false
-module: core
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
 locked: false
 cardinality: 1
 translatable: true

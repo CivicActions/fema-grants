@@ -62,6 +62,7 @@ dependencies:
     - node.type.report
   module:
     - field_layout
+    - file
     - layout_discovery
     - options
     - user
@@ -432,11 +433,10 @@ content:
   field_12_1_remarks:
     weight: 289
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
-    region: content
+    type: file_default
+    region: first
   field_13_1_1_prefix:
     weight: 291
     label: above
