@@ -3,3 +3,41 @@ type: module
 description: 'FEMA Federal Financial Report'
 core: 8.x
 package: 'Custom'
+
+default_content:
+  node:
+    - 115fd11e-b9c3-40f3-8b48-943be6a47328
+    - 2bc22df8-dbdb-481c-81bf-11f558d7176a
+    - 3c624fc5-c5cb-4197-9506-af7505dce4cb
+    - 40139cc2-477d-4bc3-a0be-4374dc5fa711
+    - 563f660e-2c4c-44f7-81c8-c18de8f1c9de
+    - 633836f3-ed9e-4df2-b379-012ee385c69c
+    - 79fca3c0-1096-42b6-b444-9587b70c30c1
+    - 8670cf35-30ef-400b-9c04-92c0237bd9f9
+    - 87460f11-2e44-44b1-be23-3bc54d5d12a4
+    - ba9836db-197e-484b-b5a7-fbf9a28e1c04
+    - cc88b7a0-6b7a-4dba-9907-76d560f7cc02
+    - ed43afdc-bf15-4074-8992-0a278baf1994
+  user:
+    - 0b27811f-fc05-497b-b6d4-a0fa06d238b1
+    - 139316ca-ac63-4e9a-b272-18242b0681f6
+    - 156df4f8-4924-467d-849b-30f68757e007
+    - 1583f040-6f62-4eeb-9428-dd68045e7301
+    - 2451b771-f8f4-4d6c-8669-df2ee7d684c5
+    - 2461ee19-9321-44fa-850a-50c98804069f
+    - 31638f4d-0b37-42aa-9f81-e5ae56aa4c81
+    - 31b5c1b4-5f09-4b4b-946a-f21339900cf7
+    - 482151d9-975c-457a-8c63-8c7c7156415a
+    - 4aeade28-d7df-49d3-908a-14c9ffa8a965
+    - 60a12c57-6e12-4909-9962-78e108f3cec1
+    - 68f1042d-4a02-43f6-a7e8-33ede32d5bf7
+    - 69680652-13d4-47c7-b685-03c8c82808eb
+    - 81d9d248-a269-4141-a36e-384a11e6c933
+    - 8754b187-6f11-4164-af37-9abe979eec6d
+    - 89e83181-97ed-46b1-b290-73a25c8befca
+    - 8f0db612-202d-4fa5-9e86-4b1d119ce931
+    - a6a74551-6606-4d2d-8a68-677e3c9875b7
+    - b0c7009c-cc9b-4d29-9f0e-054c8d6867e2
+    - c3a3bd9f-ed53-4622-8190-65629a4f811f
+    - ee50861f-fc5d-4536-b49d-3c464abef300
+    - f4a01f71-cf3a-43b2-a829-5ed3b42f7edf
