@@ -24,3 +24,6 @@ echo "Setting passwords"
 for NAME in $($DRUSH sqlq "SELECT name FROM users_field_data WHERE uid > 0"); do
   $DRUSH user:password "${NAME}" "civicactions"
 done
+
+echo "Rebuilding cache"
+$DRUSH cache:rebuild
