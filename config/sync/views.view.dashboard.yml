@@ -6,6 +6,10 @@ dependencies:
     - field.storage.workflow_transition.field_assign_to
     - field.storage.workflow_transition.field_compliance
     - system.menu.main
+    - user.role.administratror
+    - user.role.analyst
+    - user.role.grantee
+    - user.role.specialist
   module:
     - node
     - options
@@ -27,9 +31,13 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access review_status workflow_transition form'
+          role:
+            administratror: administratror
+            grantee: grantee
+            analyst: analyst
+            specialist: specialist
       cache:
         type: tag
         options: {  }
@@ -779,7 +787,7 @@ display:
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.workflow_transition.field_assign_to'
         - 'config:field.storage.workflow_transition.field_compliance'
@@ -855,7 +863,7 @@ display:
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.workflow_transition.field_assign_to'
         - 'config:field.storage.workflow_transition.field_compliance'
@@ -880,7 +888,7 @@ display:
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.workflow_transition.field_assign_to'
         - 'config:field.storage.workflow_transition.field_compliance'
