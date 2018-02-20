@@ -1,10 +1,10 @@
 account: UA-114414740-1
 premium: false
-domain_mode: 2
-cross_domains: "https://drupal.fema.civicactions.com\r\nhttp://localhost:8118"
+domain_mode: 0
+cross_domains: ''
 visibility:
   request_path_mode: 0
-  request_path_pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+  request_path_pages: ''
   user_role_mode: 0
   user_role_roles: {  }
   user_account_mode: 0
