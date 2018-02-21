@@ -1,0 +1,23 @@
+uuid: e53132fc-b0ca-455e-be4f-128aa544dc35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10a_cash_receipts
+    - node.type.sf425
+id: node.sf425.field_10a_cash_receipts
+field_name: field_10a_cash_receipts
+entity_type: node
+bundle: sf425
+label: 'a. Cash Receipts'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

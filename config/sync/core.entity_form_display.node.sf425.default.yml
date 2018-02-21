@@ -1,0 +1,150 @@
+uuid: d824d39b-23bc-4b4d-bd0b-c27dab209105
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sf425.field_10a_cash_receipts
+    - field.field.node.sf425.field_1_federal_agency
+    - field.field.node.sf425.field_2_federal_grant_no
+    - field.field.node.sf425.field_3_recipient_organization
+    - node.type.sf425
+  module:
+    - address
+    - field_group
+    - field_layout
+    - layout_discovery
+    - path
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  field_group:
+    group_pages:
+      children:
+        - group_p1
+        - group_p2
+      parent_name: ''
+      weight: 6
+      format_type: multipage_group
+      format_settings:
+        label: Pages
+        id: ''
+        classes: ''
+        page_header: '0'
+        page_counter: '0'
+        move_button: '1'
+        ajaxify: '1'
+        nonjs_multistep: '0'
+        scroll_top: '1'
+        button_label_next: Continue
+        button_label_prev: Back
+        button_label: 0
+      label: Pages
+    group_p1:
+      children:
+        - field_1_federal_agency
+        - field_2_federal_grant_no
+        - field_3_recipient_organization
+      parent_name: group_pages
+      weight: 20
+      format_type: multipage
+      format_settings:
+        label: ''
+        description: ''
+        required_fields: '1'
+        id: ''
+        classes: ''
+      label: ''
+    group_p2:
+      children:
+        - field_10a_cash_receipts
+      parent_name: group_pages
+      weight: 21
+      format_type: multipage
+      format_settings:
+        label: ''
+        description: ''
+        required_fields: '1'
+        id: ''
+        classes: ''
+      label: ''
+id: node.sf425.default
+targetEntityType: node
+bundle: sf425
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_10a_cash_receipts:
+    weight: 26
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_1_federal_agency:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_2_federal_grant_no:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_3_recipient_organization:
+    weight: 23
+    settings:
+      default_country: US
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  status: true

@@ -1,0 +1,11 @@
+name: Field Group Ajaxified Multipage Example
+type: module
+description: Set of example for Field Group Ajaxified Multipage (Visit examples/field_group_ajaxified_multipage)
+# core: 8.x
+package: Fields
+
+# Information added by Drupal.org packaging script on 2018-01-24
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'field_group_ajaxified_multipage'
+datestamp: 1516807987

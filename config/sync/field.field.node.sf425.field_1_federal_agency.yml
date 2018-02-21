@@ -1,0 +1,19 @@
+uuid: e049f87f-ba90-4dc6-bb59-73bd86d2c2a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1_federal_agency
+    - node.type.sf425
+id: node.sf425.field_1_federal_agency
+field_name: field_1_federal_agency
+entity_type: node
+bundle: sf425
+label: '1) Federal Agency'
+description: 'Federal Agency and Organizational Element to Which Report is Submitted'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

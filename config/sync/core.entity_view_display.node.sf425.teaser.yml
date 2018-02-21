@@ -1,0 +1,26 @@
+uuid: 6071e544-879e-4640-a03b-b359279c5ecb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sf425.field_1_federal_agency
+    - node.type.sf425
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.sf425.teaser
+targetEntityType: node
+bundle: sf425
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_1_federal_agency: true
