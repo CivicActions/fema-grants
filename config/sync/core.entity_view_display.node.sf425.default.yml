@@ -4,16 +4,31 @@ status: true
 dependencies:
   config:
     - field.field.node.sf425.field_10a_cash_receipts
+    - field.field.node.sf425.field_10b_cash_disbursements
+    - field.field.node.sf425.field_10d_total_federal_funds
+    - field.field.node.sf425.field_10e_federal_share
+    - field.field.node.sf425.field_10f_federal_share_unliq
+    - field.field.node.sf425.field_10i_total_recipient_share
+    - field.field.node.sf425.field_10j_recipient_share_of_exp
+    - field.field.node.sf425.field_10l_total_federal_program
+    - field.field.node.sf425.field_10m_program_income_exp_alt
+    - field.field.node.sf425.field_10n_program_income_exp_alt
     - field.field.node.sf425.field_1_federal_agency
     - field.field.node.sf425.field_2_federal_grant_no
     - field.field.node.sf425.field_3_recipient_organization
     - field.field.node.sf425.field_4a_duns_number
     - field.field.node.sf425.field_4b_ein
+    - field.field.node.sf425.field_5_recipient_account_number
+    - field.field.node.sf425.field_6_report_type
+    - field.field.node.sf425.field_7_basis_of_accounting
     - field.field.node.sf425.field_8_project_grant_period
+    - field.field.node.sf425.field_9_reporting_period_end
     - node.type.sf425
   module:
     - address
+    - datetime
     - datetime_range
+    - options
     - user
 id: node.sf425.default
 targetEntityType: node
@@ -22,6 +37,105 @@ mode: default
 content:
   field_10a_cash_receipts:
     weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10b_cash_disbursements:
+    weight: 114
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10d_total_federal_funds:
+    weight: 115
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10e_federal_share:
+    weight: 116
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10f_federal_share_unliq:
+    weight: 117
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10i_total_recipient_share:
+    weight: 118
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10j_recipient_share_of_exp:
+    weight: 119
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10l_total_federal_program:
+    weight: 120
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10m_program_income_exp_alt:
+    weight: 121
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10n_program_income_exp_alt:
+    weight: 122
     label: above
     settings:
       thousand_separator: ''
@@ -70,6 +184,28 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_5_recipient_account_number:
+    weight: 110
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_6_report_type:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_7_basis_of_accounting:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_8_project_grant_period:
     weight: 108
     label: above
@@ -79,6 +215,15 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_9_reporting_period_end:
+    weight: 113
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   links:
     weight: 100

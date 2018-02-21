@@ -9,7 +9,7 @@ id: node.sf425.field_10a_cash_receipts
 field_name: field_10a_cash_receipts
 entity_type: node
 bundle: sf425
-label: 'a. Cash Receipts'
+label: 'a) Cash Receipts'
 description: ''
 required: false
 translatable: false

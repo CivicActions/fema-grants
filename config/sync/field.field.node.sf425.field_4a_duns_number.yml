@@ -10,7 +10,7 @@ field_name: field_4a_duns_number
 entity_type: node
 bundle: sf425
 label: '4a) DUNS Number'
-description: 'Enter the DUNS or DUNS+4 number of the applicant organization.'
+description: 'Recipient organization''s Data Universal Numbering System (DUNS) number or Central Contract Registry extended DUNS number'
 required: true
 translatable: false
 default_value: {  }

@@ -4,15 +4,29 @@ status: true
 dependencies:
   config:
     - field.field.node.sf425.field_10a_cash_receipts
+    - field.field.node.sf425.field_10b_cash_disbursements
+    - field.field.node.sf425.field_10d_total_federal_funds
+    - field.field.node.sf425.field_10e_federal_share
+    - field.field.node.sf425.field_10f_federal_share_unliq
+    - field.field.node.sf425.field_10i_total_recipient_share
+    - field.field.node.sf425.field_10j_recipient_share_of_exp
+    - field.field.node.sf425.field_10l_total_federal_program
+    - field.field.node.sf425.field_10m_program_income_exp_alt
+    - field.field.node.sf425.field_10n_program_income_exp_alt
     - field.field.node.sf425.field_1_federal_agency
     - field.field.node.sf425.field_2_federal_grant_no
     - field.field.node.sf425.field_3_recipient_organization
     - field.field.node.sf425.field_4a_duns_number
     - field.field.node.sf425.field_4b_ein
+    - field.field.node.sf425.field_5_recipient_account_number
+    - field.field.node.sf425.field_6_report_type
+    - field.field.node.sf425.field_7_basis_of_accounting
     - field.field.node.sf425.field_8_project_grant_period
+    - field.field.node.sf425.field_9_reporting_period_end
     - node.type.sf425
   module:
     - address
+    - datetime
     - datetime_range
     - field_group
 third_party_settings:
@@ -41,32 +55,46 @@ third_party_settings:
         - field_3_recipient_organization
         - field_4a_duns_number
         - field_4b_ein
+        - field_5_recipient_account_number
+        - field_6_report_type
+        - field_7_basis_of_accounting
         - field_8_project_grant_period
+        - field_9_reporting_period_end
       parent_name: group_steps
       weight: 5
       format_type: tab
       format_settings:
+        label: '1-9) Basic Information'
+        formatter: open
+        description: ''
+        required_fields: true
         id: ''
         classes: ''
-        formatter: open
-        required_fields: true
-        description: ''
-        direction: vertical
-      label: 'Step 1'
+      label: '1-9) Basic Information'
       region: content
     group_step_2:
       children:
         - field_10a_cash_receipts
+        - field_10b_cash_disbursements
+        - field_10d_total_federal_funds
+        - field_10e_federal_share
+        - field_10f_federal_share_unliq
+        - field_10i_total_recipient_share
+        - field_10j_recipient_share_of_exp
+        - field_10l_total_federal_program
+        - field_10m_program_income_exp_alt
+        - field_10n_program_income_exp_alt
       parent_name: group_steps
       weight: 6
       format_type: tab
       format_settings:
+        label: '10) Transactions'
+        formatter: closed
+        description: ''
+        required_fields: true
         id: ''
         classes: ''
-        formatter: closed
-        required_fields: true
-        description: ''
-      label: 'Step 2'
+      label: '10) Transactions'
       region: content
 id: node.sf425.default
 targetEntityType: node
@@ -74,9 +102,72 @@ bundle: sf425
 mode: default
 content:
   field_10a_cash_receipts:
-    weight: 7
+    weight: 28
     settings:
-      placeholder: ''
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10b_cash_disbursements:
+    weight: 29
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10d_total_federal_funds:
+    weight: 30
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10e_federal_share:
+    weight: 31
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10f_federal_share_unliq:
+    weight: 32
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10i_total_recipient_share:
+    weight: 33
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10j_recipient_share_of_exp:
+    weight: 34
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10l_total_federal_program:
+    weight: 35
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10m_program_income_exp_alt:
+    weight: 36
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10n_program_income_exp_alt:
+    weight: 37
+    settings:
+      placeholder: '0'
     third_party_settings: {  }
     type: number
     region: content
@@ -119,11 +210,37 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_8_project_grant_period:
+  field_5_recipient_account_number:
     weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_6_report_type:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_7_basis_of_accounting:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_8_project_grant_period:
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_9_reporting_period_end:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
 hidden:
   created: true
