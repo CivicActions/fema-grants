@@ -1,16 +1,17 @@
-uuid: daf61888-71c1-4fb9-b45c-ece0ef222bc1
+uuid: 1526d75d-624c-4a0a-86da-0cf5d741a344
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_10a_cash_receipts
-field_name: field_10a_cash_receipts
+id: node.field_4b_ein
+field_name: field_4b_ein
 entity_type: node
-type: decimal
+type: string
 settings:
-  precision: 20
-  scale: 2
+  max_length: 30
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

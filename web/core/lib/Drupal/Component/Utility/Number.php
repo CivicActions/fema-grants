@@ -17,9 +17,16 @@ class Number {
    *
    * This is based on the number/range verification methods of webkit.
    *
-   * @param float $value
+   * Besides integers and floating numbers, we also support decimal numbers
+   * which are not stored in IEEE 754 format. In somewhat higher precisions for
+   * these numbers, the $step value cannot accurately represent the desired
+   * precision, when it is passed as a float. Passing it as a string bypasses
+   * this loss of precision and enables a correct calculation of the step
+   * validity.
+   *
+   * @param float|string $value
    *   The value that needs to be checked.
-   * @param float $step
+   * @param float|string $step
    *   The step scale factor. Must be positive.
    * @param float $offset
    *   (optional) An offset, to which the difference must be a multiple of the
@@ -33,6 +40,20 @@ class Number {
   public static function validStep($value, $step, $offset = 0.0) {
     $double_value = (double) abs($value - $offset);
 
+    // If step is in scientific notation, convert it to decimal.
+    $step_expanded = rtrim(number_format($step, 13, '.', ''), '0');
+    // Desired precision of comparison is one order of magnitude greater than
+    // the precision of the step.
+    $desired_precision = strrpos($step_expanded, '.') !== FALSE ? strlen($step_expanded) - strrpos($step_expanded, '.') : 1;
+
+    // If value is of higher precision than desired it isn't divisible by step.
+    $value_precision = strrpos($double_value, '.') !== FALSE ? strlen($double_value) - strrpos($double_value, '.') - 1 : 0;
+    if ($value_precision > $desired_precision) {
+      return FALSE;
+    }
+
+    $double_value = (double) round($double_value, $desired_precision);
+
     // The fractional part of a double has 53 bits. The greatest number that
     // could be represented with that is 2^53. If the given value is even bigger
     // than $step * 2^53, then dividing by $step will result in a very small
@@ -43,8 +64,9 @@ class Number {
       return TRUE;
     }
 
+    $expected = (double) round($step * round($double_value / $step), $desired_precision);
     // Now compute that remainder of a division by $step.
-    $remainder = (double) abs($double_value - $step * round($double_value / $step));
+    $remainder = (double) abs($double_value - $expected);
 
     // $remainder is a double precision floating point number. Remainders that
     // can't be represented with single precision floats are acceptable. The

@@ -8,23 +8,20 @@ dependencies:
     - field.field.node.sf425.field_2_federal_grant_no
     - field.field.node.sf425.field_3_recipient_organization
     - field.field.node.sf425.field_4a_duns_number
+    - field.field.node.sf425.field_4b_ein
+    - field.field.node.sf425.field_8_project_grant_period
     - node.type.sf425
   module:
     - address
-    - field_layout
-    - layout_discovery
+    - datetime_range
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.sf425.default
 targetEntityType: node
 bundle: sf425
 mode: default
 content:
   field_10a_cash_receipts:
-    weight: 105
+    weight: 107
     label: above
     settings:
       thousand_separator: ''
@@ -64,6 +61,24 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_4b_ein:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_8_project_grant_period:
+    weight: 108
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
     region: content
   links:
     weight: 100

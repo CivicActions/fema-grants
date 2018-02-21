@@ -61,15 +61,9 @@ dependencies:
     - field.field.node.report.field_review_status
     - node.type.report
   module:
-    - field_layout
     - file
-    - layout_discovery
     - options
     - user
-third_party_settings:
-  field_layout:
-    id: layout_twocol
-    settings: {  }
 id: node.report.default
 targetEntityType: node
 bundle: report
@@ -77,7 +71,7 @@ mode: default
 content:
   content_moderation_control:
     weight: -20
-    region: first
+    region: content
     settings: {  }
     third_party_settings: {  }
   field_01_0_federal_agency_and_or:
@@ -198,14 +192,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: first
+    region: content
   field_07_0_basis_of_accounting:
     weight: 231
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: first
+    region: content
   field_08_0_projectgrant_period_f:
     weight: 233
     label: above
@@ -436,7 +430,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: file_default
-    region: first
+    region: content
   field_13_1_1_prefix:
     weight: 291
     label: above
@@ -519,7 +513,7 @@ content:
     region: content
   links:
     weight: 0
-    region: first
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:

@@ -41,11 +41,13 @@ class NumberFieldTest extends WebTestBase {
   public function testNumberDecimalField() {
     // Create a field with settings to validate.
     $field_name = Unicode::strtolower($this->randomMachineName());
+    // Having precision = 10 and scale = 4 means 6 numbers before the decimal
+    // point and 4 after.
     FieldStorageConfig::create([
       'field_name' => $field_name,
       'entity_type' => 'entity_test',
       'type' => 'decimal',
-      'settings' => ['precision' => 8, 'scale' => 4],
+      'settings' => ['precision' => 10, 'scale' => 4],
     ])->save();
     FieldConfig::create([
       'field_name' => $field_name,
@@ -72,16 +74,29 @@ class NumberFieldTest extends WebTestBase {
     $this->assertFieldByName("{$field_name}[0][value]", '', 'Widget is displayed');
     $this->assertRaw('placeholder="0.00"');
 
-    // Submit a signed decimal value within the allowed precision and scale.
-    $value = '-1234.5678';
-    $edit = [
-      "{$field_name}[0][value]" => $value,
+    // Submit a few signed decimal value within the allowed precision and scale.
+    $valid_entries = [
+      '-1234.5678',
+      '19999.0000',
+      '99999.0000',
+      '909888.96',
+      '909888.99',
+      '988999.0096',
+      '988999.0099',
     ];
-    $this->drupalPostForm(NULL, $edit, t('Save'));
-    preg_match('|entity_test/manage/(\d+)|', $this->url, $match);
-    $id = $match[1];
-    $this->assertText(t('entity_test @id has been created.', ['@id' => $id]), 'Entity was created');
-    $this->assertRaw($value, 'Value is displayed.');
+
+    foreach ($valid_entries as $valid_entry) {
+      $this->drupalGet('entity_test/add');
+      $edit = [
+        "{$field_name}[0][value]" => $valid_entry,
+      ];
+      $this->drupalPostForm(NULL, $edit, t('Save'));
+      preg_match('|entity_test/manage/(\d+)|', $this->url, $match);
+      $id = $match[1];
+      $this->assertText(t('entity_test @id has been created.', ['@id' => $id]), 'Entity was created');
+      $this->assertRaw($valid_entry, t('Value @val is displayed.', ['@val' => $valid_entry]));
+      $this->assertNoRaw(t('%name is not a valid number.', ['%name' => $field_name]), 'Values are accepted');
+    }
 
     // Try to create entries with more than one decimal separator; assert fail.
     $wrong_entries = [

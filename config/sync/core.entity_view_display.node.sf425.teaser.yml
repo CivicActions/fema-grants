@@ -4,16 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.sf425.field_10a_cash_receipts
     - field.field.node.sf425.field_1_federal_agency
+    - field.field.node.sf425.field_2_federal_grant_no
+    - field.field.node.sf425.field_3_recipient_organization
+    - field.field.node.sf425.field_4a_duns_number
     - node.type.sf425
   module:
-    - field_layout
-    - layout_discovery
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.sf425.teaser
 targetEntityType: node
 bundle: sf425

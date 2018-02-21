@@ -1,0 +1,20 @@
+uuid: 277eaa6f-2d3c-46f6-909e-0f90fed73f52
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.field_8_project_grant_period
+field_name: field_8_project_grant_period
+entity_type: node
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

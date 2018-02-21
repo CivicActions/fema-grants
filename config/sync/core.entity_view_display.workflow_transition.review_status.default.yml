@@ -7,13 +7,7 @@ dependencies:
     - field.field.workflow_transition.review_status.field_compliance
     - workflow.workflow.review_status
   module:
-    - field_layout
-    - layout_discovery
     - options
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: workflow_transition.review_status.default
 targetEntityType: workflow_transition
 bundle: review_status

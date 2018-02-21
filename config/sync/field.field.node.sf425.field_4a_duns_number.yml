@@ -11,7 +11,7 @@ entity_type: node
 bundle: sf425
 label: '4a) DUNS Number'
 description: 'Enter the DUNS or DUNS+4 number of the applicant organization.'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

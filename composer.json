@@ -42,7 +42,7 @@
         "drupal/core": "~8.4",
         "drupal/default_content": "^1.0@alpha",
         "drupal/drupal-extension": "~3.0",
-        "drupal/field_group": "^1.0",
+        "drupal/field_group": "3.0-beta1",
         "drupal/field_group_ajaxified_multipage": "^1.0@alpha",
         "drupal/uswds": "^1.0@beta",
         "drupal/workflow": "^1.0",
@@ -91,6 +91,11 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+          "drupal/core": {
+            "Extended number validation": "https://www.drupal.org/files/issues/2230909-78-simple_decimals_fail_to.patch"
+          }
         }
     }
 }

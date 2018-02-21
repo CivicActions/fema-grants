@@ -4,16 +4,65 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.report.field_01_0_federal_agency_and_or
+    - field.field.node.report.field_02_0_federal_grant_or_othe
+    - field.field.node.report.field_03_1_organization_name
+    - field.field.node.report.field_03_2_street1
+    - field.field.node.report.field_03_3_street2
+    - field.field.node.report.field_03_4_city
+    - field.field.node.report.field_03_5_county
+    - field.field.node.report.field_03_6_state
+    - field.field.node.report.field_03_7_province
+    - field.field.node.report.field_03_8_country
+    - field.field.node.report.field_03_9_zip__postal_code
+    - field.field.node.report.field_04_0_duns_number
+    - field.field.node.report.field_04_1_ein
+    - field.field.node.report.field_05_0_recipient_account_num
+    - field.field.node.report.field_06_0_report_type
+    - field.field.node.report.field_07_0_basis_of_accounting
+    - field.field.node.report.field_08_0_projectgrant_period_f
+    - field.field.node.report.field_08_1_projectgrant_period_t
+    - field.field.node.report.field_09_0_report_period_end
+    - field.field.node.report.field_10_04_cash_receipts
+    - field.field.node.report.field_10_05_cash_disbursements
+    - field.field.node.report.field_10_06_cash_on_hand
+    - field.field.node.report.field_10_09_total_federal_funds_
+    - field.field.node.report.field_10_10_federal_share_of_exp
+    - field.field.node.report.field_10_11_federal_share_of_unl
+    - field.field.node.report.field_10_12_total_federal_share
+    - field.field.node.report.field_10_13_unobligated_balance_
+    - field.field.node.report.field_10_15_total_recipient_shar
+    - field.field.node.report.field_10_16_recipient_share_of_e
+    - field.field.node.report.field_10_17_remaining_recipient_
+    - field.field.node.report.field_10_19_total_federal_progra
+    - field.field.node.report.field_10_20_program_income_expen
+    - field.field.node.report.field_10_21_program_income_expen
+    - field.field.node.report.field_10_22_unexpended_program_i
+    - field.field.node.report.field_11_08_type
+    - field.field.node.report.field_11_09_rate
+    - field.field.node.report.field_11_10_period_from
+    - field.field.node.report.field_11_11_period_to
+    - field.field.node.report.field_11_12_base
+    - field.field.node.report.field_11_13_amount_charged
+    - field.field.node.report.field_11_14_federal_share
+    - field.field.node.report.field_11_16_total_base
+    - field.field.node.report.field_11_17_total_amount_charged
+    - field.field.node.report.field_11_18_total_federal_share
+    - field.field.node.report.field_12_1_remarks
+    - field.field.node.report.field_13_1_1_prefix
+    - field.field.node.report.field_13_1_2_first_name
+    - field.field.node.report.field_13_1_3_middle_name
+    - field.field.node.report.field_13_1_4_last_name
+    - field.field.node.report.field_13_1_5_suffix
+    - field.field.node.report.field_13_1_6_title
+    - field.field.node.report.field_13_2_signature
+    - field.field.node.report.field_13_3_telephone_number
+    - field.field.node.report.field_13_4_email
+    - field.field.node.report.field_13_5_date_report_submitted
     - field.field.node.report.field_review_status
     - node.type.report
   module:
-    - field_layout
-    - layout_discovery
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.report.teaser
 targetEntityType: node
 bundle: report
