@@ -23,4 +23,8 @@ content:
     weight: 100
     region: content
 hidden:
+  field_10a_cash_receipts: true
   field_1_federal_agency: true
+  field_2_federal_grant_no: true
+  field_3_recipient_organization: true
+  field_4a_duns_number: true

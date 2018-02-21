@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.sf425.field_1_federal_agency
     - field.field.node.sf425.field_2_federal_grant_no
     - field.field.node.sf425.field_3_recipient_organization
+    - field.field.node.sf425.field_4a_duns_number
     - node.type.sf425
   module:
     - address
@@ -34,7 +35,7 @@ third_party_settings:
         page_counter: '0'
         move_button: '1'
         ajaxify: '1'
-        nonjs_multistep: '0'
+        nonjs_multistep: '1'
         scroll_top: '1'
         button_label_next: Continue
         button_label_prev: Back
@@ -45,6 +46,7 @@ third_party_settings:
         - field_1_federal_agency
         - field_2_federal_grant_no
         - field_3_recipient_organization
+        - field_4a_duns_number
       parent_name: group_pages
       weight: 20
       format_type: multipage
@@ -59,7 +61,7 @@ third_party_settings:
       children:
         - field_10a_cash_receipts
       parent_name: group_pages
-      weight: 21
+      weight: 22
       format_type: multipage
       format_settings:
         label: ''
@@ -80,7 +82,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_10a_cash_receipts:
-    weight: 26
+    weight: 7
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -108,6 +110,14 @@ content:
       default_country: US
     third_party_settings: {  }
     type: address_default
+    region: content
+  field_4a_duns_number:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   path:
     type: path

@@ -2,3 +2,23 @@
 @import "_variables.scss";
 // Import the USWDS source.
 @import "../node_modules/uswds/src/stylesheets/uswds.scss";
+
+.field--widget-number {
+  .field-prefix {
+    display: none;
+  }
+  label {
+    float: left;
+		width: 50%;
+    margin-top: 1rem;
+  }
+	input {
+    float: right;
+		width: 50%;
+	}
+  :after {
+		content: "";
+		display: table;
+		clear: both;
+  }
+}

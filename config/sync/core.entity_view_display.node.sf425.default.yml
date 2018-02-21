@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.sf425.field_1_federal_agency
     - field.field.node.sf425.field_2_federal_grant_no
     - field.field.node.sf425.field_3_recipient_organization
+    - field.field.node.sf425.field_4a_duns_number
     - node.type.sf425
   module:
     - address
@@ -55,6 +56,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: address_default
+    region: content
+  field_4a_duns_number:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   links:
     weight: 100
