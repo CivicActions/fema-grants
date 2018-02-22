@@ -1,0 +1,33 @@
+uuid: eb4e3477-27a6-4b30-9a47-6dbb06bda495
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_11a1_type_of_rate
+field_name: field_11a1_type_of_rate
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: provisional
+      label: Provisional
+    -
+      value: predetermined
+      label: Predetermined
+    -
+      value: final
+      label: Final
+    -
+      value: fixed
+      label: Fixed
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

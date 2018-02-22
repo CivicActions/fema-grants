@@ -1,0 +1,25 @@
+uuid: 90f029a4-9bc9-4a46-896c-8f0cb1da10b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10e_federal_share
+    - node.type.sf425
+id: node.sf425.field_10e_federal_share
+field_name: field_10e_federal_share
+entity_type: node
+bundle: sf425
+label: 'e) Federal share of expenditures'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: 999999999999.99
+  prefix: $
+  suffix: ''
+field_type: decimal

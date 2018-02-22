@@ -18,6 +18,7 @@ permissions:
   - 'create review_status workflow_transition'
   - 'create update_internal_status workflow_transition'
   - 'edit any grant content'
+  - 'edit any sf425 content'
   - 'schedule internal_status workflow_transition'
   - 'use text format filtered_html'
   - 'view report revisions'

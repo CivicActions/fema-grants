@@ -1,0 +1,26 @@
+uuid: 1631a537-93e4-41b8-96c1-702b52dbd2c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10k_remaining_recipient
+    - node.type.sf425
+  module:
+    - computed_field
+id: node.sf425.field_10k_remaining_recipient
+field_name: field_10k_remaining_recipient
+entity_type: node
+bundle: sf425
+label: 'k) Remaining recipient share to be provided'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: "$value = 0;\r\nif (isset($fields['field_10i_total_recipient_share'][0]['value']) && isset($fields['field_10j_recipient_share_of_exp'][0]['value'])) {\r\n  $value = $fields['field_10i_total_recipient_share'][0]['value'] - $fields['field_10j_recipient_share_of_exp'][0]['value'];\r\n}\r\nif ($value < 0) {\r\n  $value = 0;\r\n}"
+  prefix: $
+  suffix: ''
+field_type: computed_decimal

@@ -61,15 +61,9 @@ dependencies:
     - field.field.node.report.field_review_status
     - node.type.report
   module:
-    - field_layout
     - file
-    - layout_discovery
     - path
     - workflow
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.report.default
 targetEntityType: node
 bundle: report

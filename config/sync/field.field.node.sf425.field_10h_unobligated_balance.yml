@@ -1,0 +1,26 @@
+uuid: def4d383-ae04-4e77-b738-b0323e5a2c73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10h_unobligated_balance
+    - node.type.sf425
+  module:
+    - computed_field
+id: node.sf425.field_10h_unobligated_balance
+field_name: field_10h_unobligated_balance
+entity_type: node
+bundle: sf425
+label: 'h) Unobligated balance of Federal Funds'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: "$value = 0;\r\nif (isset($fields['field_10d_total_federal_funds'][0]['value']) && isset($fields['field_10e_federal_share'][0]['value']) && isset($fields['field_10f_federal_share_unliq'][0]['value'])) {\r\n  $value = $fields['field_10d_total_federal_funds'][0]['value'] - ($fields['field_10e_federal_share'][0]['value'] + $fields['field_10f_federal_share_unliq'][0]['value']);\r\n}"
+  prefix: $
+  suffix: ''
+field_type: computed_decimal

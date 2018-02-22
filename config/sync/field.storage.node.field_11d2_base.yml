@@ -1,0 +1,20 @@
+uuid: 3228bac0-8eaa-40e7-bcb8-8b2088050d03
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_11d2_base
+field_name: field_11d2_base
+entity_type: node
+type: decimal
+settings:
+  precision: 20
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

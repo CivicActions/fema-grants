@@ -75,6 +75,7 @@ class NumberTest extends TestCase {
       [1000, -10, TRUE],
 
       // Valid and very small float steps.
+      [1936.5, 3e-8, TRUE],
       [1000.12345, 1e-10, TRUE],
       [3.9999999999999, 1e-13, TRUE],
 
@@ -88,7 +89,28 @@ class NumberTest extends TestCase {
 
       // Step mismatches very close to being valid.
       [70 + 9e-7, 10 + 9e-7, FALSE],
-      [1936.5, 3e-8, FALSE],
+
+      // These floats are valid, but might trigger FP math idiosyncrasies.
+      // @see https://www.drupal.org/node/2230909
+      [3333333, 0.01, TRUE],
+      [4444444, 0.01, TRUE],
+      [9990009888.96, 0.01, TRUE],
+      [9990009888.99, 0.01, TRUE],
+      [990088999.0096, 0.0001, TRUE],
+      [990088999.0099, 0.0001, TRUE],
+      [4031239412.52, 0.01, TRUE],
+      [90000000000.00, 0.01, TRUE],
+      [9999999999.99, 0.01, TRUE],
+      [-3.1933172, 0.0000001, TRUE],
+      [1109.87, 0.01, TRUE],
+      [70000000, 0.01, TRUE],
+      [70000000.00, 0.01, TRUE],
+      [13517282.20, 0.01, TRUE],
+      [13517282.21, 0.01, TRUE],
+
+      // Precision of the value is higher than that of the step.
+      [990088999.0099, 0.001, FALSE],
+      [990088999.0099, 0.01, FALSE],
     ];
   }
 

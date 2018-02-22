@@ -1,0 +1,766 @@
+uuid: 9208b9a5-817e-41ac-9959-d671c3deb694
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sf425.field_10a_cash_receipts
+    - field.field.node.sf425.field_10b_cash_disbursements
+    - field.field.node.sf425.field_10c_cash_on_hand
+    - field.field.node.sf425.field_10d_total_federal_funds
+    - field.field.node.sf425.field_10e_federal_share
+    - field.field.node.sf425.field_10f_federal_share_unliq
+    - field.field.node.sf425.field_10g_total_federal_share
+    - field.field.node.sf425.field_10h_unobligated_balance
+    - field.field.node.sf425.field_10i_total_recipient_share
+    - field.field.node.sf425.field_10j_recipient_share_of_exp
+    - field.field.node.sf425.field_10k_remaining_recipient
+    - field.field.node.sf425.field_10l_total_federal_program
+    - field.field.node.sf425.field_10m_program_income_exp_alt
+    - field.field.node.sf425.field_10n_program_income_exp_alt
+    - field.field.node.sf425.field_11a1_type_of_rate
+    - field.field.node.sf425.field_11a2_type_of_rate
+    - field.field.node.sf425.field_11b1_rate
+    - field.field.node.sf425.field_11b2_rate
+    - field.field.node.sf425.field_11c1_period
+    - field.field.node.sf425.field_11c2_period
+    - field.field.node.sf425.field_11d1_base
+    - field.field.node.sf425.field_11d2_base
+    - field.field.node.sf425.field_11e1_amount_charged
+    - field.field.node.sf425.field_11e2_amount_charged
+    - field.field.node.sf425.field_11f1_federal_share
+    - field.field.node.sf425.field_11f2_federal_share
+    - field.field.node.sf425.field_11g_total_amount_charged
+    - field.field.node.sf425.field_11g_total_base
+    - field.field.node.sf425.field_11g_total_federal_share
+    - field.field.node.sf425.field_12_remarks
+    - field.field.node.sf425.field_13a_first_name
+    - field.field.node.sf425.field_13a_last_name
+    - field.field.node.sf425.field_13a_middle_name
+    - field.field.node.sf425.field_13a_prefix
+    - field.field.node.sf425.field_13a_suffix
+    - field.field.node.sf425.field_13a_title
+    - field.field.node.sf425.field_13b_signature
+    - field.field.node.sf425.field_13b_signature_drawn
+    - field.field.node.sf425.field_13c_telephone_number
+    - field.field.node.sf425.field_13d_email_address
+    - field.field.node.sf425.field_13e_date_report_submitted
+    - field.field.node.sf425.field_1_federal_agency
+    - field.field.node.sf425.field_2_federal_grant_no
+    - field.field.node.sf425.field_3_recipient_organization
+    - field.field.node.sf425.field_4a_duns_number
+    - field.field.node.sf425.field_4b_ein
+    - field.field.node.sf425.field_5_recipient_account_number
+    - field.field.node.sf425.field_6_report_type
+    - field.field.node.sf425.field_7_basis_of_accounting
+    - field.field.node.sf425.field_8_project_grant_period
+    - field.field.node.sf425.field_9_reporting_period_end
+    - node.type.sf425
+  module:
+    - address
+    - computed_field
+    - datetime
+    - datetime_range
+    - field_group
+    - file
+    - options
+    - signature_field
+    - telephone
+    - user
+third_party_settings:
+  field_group:
+    group_1_9_basic_information:
+      children:
+        - field_1_federal_agency
+        - field_2_federal_grant_no
+        - field_3_recipient_organization
+        - field_4a_duns_number
+        - field_4b_ein
+        - field_5_recipient_account_number
+        - field_6_report_type
+        - field_7_basis_of_accounting
+        - field_8_project_grant_period
+        - field_9_reporting_period_end
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: '1-9) Basic Information'
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: '1-9) Basic Information'
+      region: content
+    group_10_transactions:
+      children:
+        - field_10a_cash_receipts
+        - field_10b_cash_disbursements
+        - field_10c_cash_on_hand
+        - field_10d_total_federal_funds
+        - field_10e_federal_share
+        - field_10f_federal_share_unliq
+        - field_10g_total_federal_share
+        - field_10h_unobligated_balance
+        - field_10i_total_recipient_share
+        - field_10j_recipient_share_of_exp
+        - field_10k_remaining_recipient
+        - field_10l_total_federal_program
+        - field_10m_program_income_exp_alt
+        - field_10n_program_income_exp_alt
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: '10) Transactions'
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: '10) Transactions'
+      region: content
+    group_indirect_expenses:
+      children:
+        - group_indirect_expense
+        - group_indirect_expense_b
+        - group_11g_totals
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: '11) Indirect Expenses'
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: '11) Indirect Expenses'
+      region: content
+    group_indirect_expense:
+      children:
+        - field_11a1_type_of_rate
+        - field_11b1_rate
+        - field_11c1_period
+        - field_11d1_base
+        - field_11e1_amount_charged
+        - field_11f1_federal_share
+      parent_name: group_indirect_expenses
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: 'Indirect Expense'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'Indirect Expense'
+      region: content
+    group_indirect_expense_b:
+      children:
+        - field_11a2_type_of_rate
+        - field_11b2_rate
+        - field_11c2_period
+        - field_11d2_base
+        - field_11e2_amount_charged
+        - field_11f2_federal_share
+      parent_name: group_indirect_expenses
+      weight: 21
+      format_type: html_element
+      format_settings:
+        label: 'Indirect Expense'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'Indirect Expense'
+      region: content
+    group_11g_totals:
+      children:
+        - field_11g_total_base
+        - field_11g_total_amount_charged
+        - field_11g_total_federal_share
+      parent_name: group_indirect_expenses
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'g) Totals'
+      region: content
+    group_12_remarks:
+      children:
+        - field_12_remarks
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: '12) Remarks'
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: '12) Remarks'
+      region: content
+    group_13_certification:
+      children:
+        - field_13a_prefix
+        - field_13a_first_name
+        - field_13a_middle_name
+        - field_13a_last_name
+        - field_13a_suffix
+        - field_13a_title
+        - field_13b_signature
+        - field_13b_signature_drawn
+        - field_13c_telephone_number
+        - field_13d_email_address
+        - field_13e_date_report_submitted
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h2
+        attributes: ''
+        effect: none
+        speed: fast
+      label: '13) Certification'
+      region: content
+id: node.sf425.default
+targetEntityType: node
+bundle: sf425
+mode: default
+content:
+  field_10a_cash_receipts:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10b_cash_disbursements:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10c_cash_on_hand:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: '2'
+      prefix_suffix: '1'
+      cache_unit: '-1'
+      cache_duration: '1'
+    third_party_settings: {  }
+    type: computed_decimal
+    region: content
+  field_10d_total_federal_funds:
+    weight: 5
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10e_federal_share:
+    weight: 6
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10f_federal_share_unliq:
+    weight: 7
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10g_total_federal_share:
+    weight: 8
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: '2'
+      prefix_suffix: '1'
+      cache_unit: '-1'
+      cache_duration: '1'
+    third_party_settings: {  }
+    type: computed_decimal
+    region: content
+  field_10h_unobligated_balance:
+    weight: 9
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: '2'
+      prefix_suffix: '1'
+      cache_unit: '-1'
+      cache_duration: '1'
+    third_party_settings: {  }
+    type: computed_decimal
+    region: content
+  field_10i_total_recipient_share:
+    weight: 10
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10j_recipient_share_of_exp:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10k_remaining_recipient:
+    weight: 12
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: '2'
+      prefix_suffix: '1'
+      cache_unit: '-1'
+      cache_duration: '1'
+    third_party_settings: {  }
+    type: computed_decimal
+    region: content
+  field_10l_total_federal_program:
+    weight: 13
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10m_program_income_exp_alt:
+    weight: 14
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_10n_program_income_exp_alt:
+    weight: 15
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_11a1_type_of_rate:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_11a2_type_of_rate:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_11b1_rate:
+    weight: 6
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_11b2_rate:
+    weight: 7
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_11c1_period:
+    weight: 7
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: short
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_11c2_period:
+    weight: 8
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: short
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_11d1_base:
+    weight: 8
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_11d2_base:
+    weight: 9
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_11e1_amount_charged:
+    weight: 9
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: '2'
+      prefix_suffix: '1'
+      cache_unit: '-1'
+      cache_duration: '1'
+    third_party_settings: {  }
+    type: computed_decimal
+    region: content
+  field_11e2_amount_charged:
+    weight: 10
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: '2'
+      prefix_suffix: '1'
+      cache_unit: '-1'
+      cache_duration: '1'
+    third_party_settings: {  }
+    type: computed_decimal
+    region: content
+  field_11f1_federal_share:
+    weight: 10
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_11f2_federal_share:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_11g_total_amount_charged:
+    weight: 24
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: '2'
+      prefix_suffix: '1'
+      cache_unit: '-1'
+      cache_duration: '1'
+    third_party_settings: {  }
+    type: computed_decimal
+    region: content
+  field_11g_total_base:
+    weight: 23
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: '2'
+      prefix_suffix: '1'
+      cache_unit: '-1'
+      cache_duration: '1'
+    third_party_settings: {  }
+    type: computed_decimal
+    region: content
+  field_11g_total_federal_share:
+    weight: 25
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: '2'
+      prefix_suffix: '1'
+      cache_unit: '-1'
+      cache_duration: '1'
+    third_party_settings: {  }
+    type: computed_decimal
+    region: content
+  field_12_remarks:
+    weight: 26
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_13a_first_name:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_13a_last_name:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_13a_middle_name:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_13a_prefix:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_13a_suffix:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_13a_title:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_13b_signature:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_13b_signature_drawn:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_signature_field_formatter
+    region: content
+  field_13c_telephone_number:
+    weight: 13
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_13d_email_address:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_13e_date_report_submitted:
+    weight: 15
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_1_federal_agency:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_2_federal_grant_no:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_3_recipient_organization:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_4a_duns_number:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_4b_ein:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_5_recipient_account_number:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_6_report_type:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_7_basis_of_accounting:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_8_project_grant_period:
+    weight: 9
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: short
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_9_reporting_period_end:
+    weight: 10
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  links: true

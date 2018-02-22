@@ -5,16 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.grant.body
+    - field.field.node.grant.field_grantee_contact
+    - field.field.node.grant.field_grantid
+    - field.field.node.grant.field_organization
     - node.type.grant
   module:
-    - field_layout
-    - layout_discovery
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.grant.teaser
 targetEntityType: node
 bundle: grant

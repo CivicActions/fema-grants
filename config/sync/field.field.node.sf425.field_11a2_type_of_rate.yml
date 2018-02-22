@@ -1,0 +1,21 @@
+uuid: 69ea4459-a934-48e7-b1cc-6779155205f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11a2_type_of_rate
+    - node.type.sf425
+  module:
+    - options
+id: node.sf425.field_11a2_type_of_rate
+field_name: field_11a2_type_of_rate
+entity_type: node
+bundle: sf425
+label: 'a) Type of Rate'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

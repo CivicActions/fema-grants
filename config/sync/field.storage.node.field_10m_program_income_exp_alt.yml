@@ -1,0 +1,20 @@
+uuid: 002da6cb-9d5e-4631-a41b-eed660ba93ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_10m_program_income_exp_alt
+field_name: field_10m_program_income_exp_alt
+entity_type: node
+type: decimal
+settings:
+  precision: 20
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

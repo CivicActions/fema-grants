@@ -1,0 +1,19 @@
+uuid: 04d54574-fcfd-413e-9c74-cee850e4d2dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13a_prefix
+    - node.type.sf425
+id: node.sf425.field_13a_prefix
+field_name: field_13a_prefix
+entity_type: node
+bundle: sf425
+label: Prefix
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

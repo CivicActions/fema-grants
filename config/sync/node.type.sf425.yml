@@ -1,0 +1,18 @@
+uuid: 0047ed89-7429-4f20-b375-476a02f6efa0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Federal Financial Report'
+type: sf425
+description: 'Standard Form 425 Version 1.0 (OMB Number: 4040-0014)'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

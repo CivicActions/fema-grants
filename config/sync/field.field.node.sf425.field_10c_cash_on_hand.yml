@@ -1,0 +1,26 @@
+uuid: 1decb66c-592f-433b-b638-67dfdc937bd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10c_cash_on_hand
+    - node.type.sf425
+  module:
+    - computed_field
+id: node.sf425.field_10c_cash_on_hand
+field_name: field_10c_cash_on_hand
+entity_type: node
+bundle: sf425
+label: 'c) Cash on Hand'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: "$value = 0;\r\nif (isset($fields['field_10a_cash_receipts'][0]['value']) && isset($fields['field_10b_cash_disbursements'][0]['value'])) {\r\n  $value = $fields['field_10a_cash_receipts'][0]['value'] - $fields['field_10b_cash_disbursements'][0]['value'];\r\n}"
+  prefix: $
+  suffix: ''
+field_type: computed_decimal

@@ -9,14 +9,8 @@ dependencies:
     - field.field.node.grant.field_organization
     - node.type.grant
   module:
-    - field_layout
-    - layout_discovery
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.grant.default
 targetEntityType: node
 bundle: grant

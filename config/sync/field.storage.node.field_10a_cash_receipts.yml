@@ -1,0 +1,20 @@
+uuid: daf61888-71c1-4fb9-b45c-ece0ef222bc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_10a_cash_receipts
+field_name: field_10a_cash_receipts
+entity_type: node
+type: decimal
+settings:
+  precision: 20
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

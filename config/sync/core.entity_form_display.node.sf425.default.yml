@@ -1,0 +1,571 @@
+uuid: d824d39b-23bc-4b4d-bd0b-c27dab209105
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sf425.field_10a_cash_receipts
+    - field.field.node.sf425.field_10b_cash_disbursements
+    - field.field.node.sf425.field_10c_cash_on_hand
+    - field.field.node.sf425.field_10d_total_federal_funds
+    - field.field.node.sf425.field_10e_federal_share
+    - field.field.node.sf425.field_10f_federal_share_unliq
+    - field.field.node.sf425.field_10g_total_federal_share
+    - field.field.node.sf425.field_10h_unobligated_balance
+    - field.field.node.sf425.field_10i_total_recipient_share
+    - field.field.node.sf425.field_10j_recipient_share_of_exp
+    - field.field.node.sf425.field_10k_remaining_recipient
+    - field.field.node.sf425.field_10l_total_federal_program
+    - field.field.node.sf425.field_10m_program_income_exp_alt
+    - field.field.node.sf425.field_10n_program_income_exp_alt
+    - field.field.node.sf425.field_11a1_type_of_rate
+    - field.field.node.sf425.field_11a2_type_of_rate
+    - field.field.node.sf425.field_11b1_rate
+    - field.field.node.sf425.field_11b2_rate
+    - field.field.node.sf425.field_11c1_period
+    - field.field.node.sf425.field_11c2_period
+    - field.field.node.sf425.field_11d1_base
+    - field.field.node.sf425.field_11d2_base
+    - field.field.node.sf425.field_11e1_amount_charged
+    - field.field.node.sf425.field_11e2_amount_charged
+    - field.field.node.sf425.field_11f1_federal_share
+    - field.field.node.sf425.field_11f2_federal_share
+    - field.field.node.sf425.field_11g_total_amount_charged
+    - field.field.node.sf425.field_11g_total_base
+    - field.field.node.sf425.field_11g_total_federal_share
+    - field.field.node.sf425.field_12_remarks
+    - field.field.node.sf425.field_13a_first_name
+    - field.field.node.sf425.field_13a_last_name
+    - field.field.node.sf425.field_13a_middle_name
+    - field.field.node.sf425.field_13a_prefix
+    - field.field.node.sf425.field_13a_suffix
+    - field.field.node.sf425.field_13a_title
+    - field.field.node.sf425.field_13b_signature
+    - field.field.node.sf425.field_13b_signature_drawn
+    - field.field.node.sf425.field_13c_telephone_number
+    - field.field.node.sf425.field_13d_email_address
+    - field.field.node.sf425.field_13e_date_report_submitted
+    - field.field.node.sf425.field_1_federal_agency
+    - field.field.node.sf425.field_2_federal_grant_no
+    - field.field.node.sf425.field_3_recipient_organization
+    - field.field.node.sf425.field_4a_duns_number
+    - field.field.node.sf425.field_4b_ein
+    - field.field.node.sf425.field_5_recipient_account_number
+    - field.field.node.sf425.field_6_report_type
+    - field.field.node.sf425.field_7_basis_of_accounting
+    - field.field.node.sf425.field_8_project_grant_period
+    - field.field.node.sf425.field_9_reporting_period_end
+    - node.type.sf425
+  module:
+    - address
+    - datetime
+    - datetime_range
+    - field_group
+    - file
+    - select_text_value
+    - signature_field
+    - telephone
+third_party_settings:
+  field_group:
+    group_steps:
+      children:
+        - group_step
+        - group_step_2
+        - group_11_indirect_expense
+        - group_12_remarks
+        - group_13_certification
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        effect: none
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: vertical
+      label: Steps
+      region: content
+    group_step:
+      children:
+        - field_1_federal_agency
+        - field_2_federal_grant_no
+        - field_3_recipient_organization
+        - field_4a_duns_number
+        - field_4b_ein
+        - field_5_recipient_account_number
+        - field_6_report_type
+        - field_7_basis_of_accounting
+        - field_8_project_grant_period
+        - field_9_reporting_period_end
+      parent_name: group_steps
+      weight: 5
+      format_type: tab
+      format_settings:
+        label: '1-9) Basic Information'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: '1-9) Basic Information'
+      region: content
+    group_step_2:
+      children:
+        - field_10a_cash_receipts
+        - field_10b_cash_disbursements
+        - field_10d_total_federal_funds
+        - field_10e_federal_share
+        - field_10f_federal_share_unliq
+        - field_10i_total_recipient_share
+        - field_10j_recipient_share_of_exp
+        - field_10l_total_federal_program
+        - field_10m_program_income_exp_alt
+        - field_10n_program_income_exp_alt
+      parent_name: group_steps
+      weight: 6
+      format_type: tab
+      format_settings:
+        label: '10) Transactions'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: '10) Transactions'
+      region: content
+    group_11_indirect_expense:
+      children:
+        - group_indirect_expense
+        - group_indirect_expense_b
+      parent_name: group_steps
+      weight: 7
+      format_type: tab
+      format_settings:
+        label: '11) Indirect Expenses'
+        formatter: closed
+        description: 'Complete this information only if required by the awarding agency. Enter cumulative amounts from date of the inception of the award through the end date of the reporting period specified above.'
+        required_fields: true
+        id: ''
+        classes: ''
+        direction: vertical
+      label: '11) Indirect Expenses'
+      region: content
+    group_indirect_expense:
+      children:
+        - field_11a1_type_of_rate
+        - field_11b1_rate
+        - field_11c1_period
+        - field_11d1_base
+        - field_11f1_federal_share
+      parent_name: group_11_indirect_expense
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        open: false
+        direction: vertical
+        formatter: closed
+      label: 'Indirect Expense'
+      region: content
+    group_indirect_expense_b:
+      children:
+        - field_11a2_type_of_rate
+        - field_11b2_rate
+        - field_11c2_period
+        - field_11d2_base
+        - field_11f2_federal_share
+      parent_name: group_11_indirect_expense
+      weight: 21
+      format_type: fieldset
+      format_settings:
+        label: 'Indirect Expense (additional)'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Indirect Expense (additional)'
+      region: content
+    group_12_remarks:
+      children:
+        - field_12_remarks
+      parent_name: group_steps
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: '12) Remarks'
+      region: content
+    group_13_certification:
+      children:
+        - group_13a_name_and_title
+      parent_name: group_steps
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: '13) Certification'
+      region: content
+    group_13a_name_and_title:
+      children:
+        - field_13a_prefix
+        - field_13a_first_name
+        - field_13a_middle_name
+        - field_13a_last_name
+        - field_13a_suffix
+        - field_13a_title
+        - field_13b_signature
+        - field_13b_signature_drawn
+        - field_13c_telephone_number
+        - field_13d_email_address
+        - field_13e_date_report_submitted
+      parent_name: group_13_certification
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'a) Name and Title of Authorized Certifying Official'
+      region: content
+id: node.sf425.default
+targetEntityType: node
+bundle: sf425
+mode: default
+content:
+  field_10a_cash_receipts:
+    weight: 28
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10b_cash_disbursements:
+    weight: 29
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10d_total_federal_funds:
+    weight: 31
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10e_federal_share:
+    weight: 32
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10f_federal_share_unliq:
+    weight: 33
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10i_total_recipient_share:
+    weight: 34
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10j_recipient_share_of_exp:
+    weight: 35
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10l_total_federal_program:
+    weight: 36
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10m_program_income_exp_alt:
+    weight: 37
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_10n_program_income_exp_alt:
+    weight: 38
+    settings:
+      placeholder: '0'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_11a1_type_of_rate:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_11a2_type_of_rate:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_11b1_rate:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_11b2_rate:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_11c1_period:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_11c2_period:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_11d1_base:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_11d2_base:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_11f1_federal_share:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_11f2_federal_share:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_12_remarks:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_13a_first_name:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_13a_last_name:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_13a_middle_name:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_13a_prefix:
+    weight: 10
+    settings:
+      size: '10'
+      placeholder: ''
+      select_type: select
+      custom_value_field_title: ''
+      custom_value_field_description: ''
+      allowed_values: "Mr.\nMrs.\nMiss\nMs.\nDr.\nRev.\nProf."
+      custom_value_label: Other
+    third_party_settings: {  }
+    type: select_string_textfield
+    region: content
+  field_13a_suffix:
+    weight: 14
+    settings:
+      size: '10'
+      placeholder: ''
+      select_type: select
+      custom_value_field_title: ''
+      custom_value_field_description: ''
+      allowed_values: "Jr.\nSr.\nM.D.\nPh.D"
+      custom_value_label: Other
+    third_party_settings: {  }
+    type: select_string_textfield
+    region: content
+  field_13a_title:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_13b_signature:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_13b_signature_drawn:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: field_signature_field_widget
+    region: content
+  field_13c_telephone_number:
+    weight: 18
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_13d_email_address:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_13e_date_report_submitted:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_1_federal_agency:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_2_federal_grant_no:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_3_recipient_organization:
+    weight: 3
+    settings:
+      default_country: US
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_4a_duns_number:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_4b_ein:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_5_recipient_account_number:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_6_report_type:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_7_basis_of_accounting:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_8_project_grant_period:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_9_reporting_period_end:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  created: true
+  field_10c_cash_on_hand: true
+  field_10g_total_federal_share: true
+  field_10h_unobligated_balance: true
+  field_10k_remaining_recipient: true
+  field_11e1_amount_charged: true
+  field_11e2_amount_charged: true
+  field_11g_total_amount_charged: true
+  field_11g_total_base: true
+  field_11g_total_federal_share: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

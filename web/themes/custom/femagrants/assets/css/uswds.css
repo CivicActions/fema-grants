@@ -3689,3 +3689,34 @@ input[type=search] {
     position: absolute;
     top: 0;
     transition: all 0.2s ease-in-out; }
+
+.field--widget-number .field-prefix {
+  display: none; }
+
+.field--widget-number label {
+  float: left;
+  width: 50%;
+  margin-top: 1rem; }
+
+.field--widget-number input {
+  float: right;
+  width: 50%; }
+
+.field--widget-number :after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.field {
+  clear: left;
+  padding: 2rem 0; }
+
+.field__label {
+  font-weight: bold;
+  width: 40%;
+  float: left;
+  padding-right: 2rem; }
+
+.field__item {
+  width: 60%;
+  float: left; }

@@ -1,0 +1,21 @@
+uuid: 4490917a-1416-439e-8762-1f7d08e9f439
+langcode: en
+status: true
+dependencies:
+  module:
+    - computed_field
+    - node
+id: node.field_10h_unobligated_balance
+field_name: field_10h_unobligated_balance
+entity_type: node
+type: computed_decimal
+settings:
+  precision: '20'
+  scale: '2'
+module: computed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

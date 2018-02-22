@@ -1,0 +1,19 @@
+uuid: 1ec7d608-7c72-4189-9282-526ed85ab442
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13a_title
+    - node.type.sf425
+id: node.sf425.field_13a_title
+field_name: field_13a_title
+entity_type: node
+bundle: sf425
+label: 'Title of Authorized Certifying Official'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

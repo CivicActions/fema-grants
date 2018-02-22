@@ -1,0 +1,21 @@
+uuid: e7bc54f3-a92c-429e-95d9-ce638a2baee4
+langcode: en
+status: true
+dependencies:
+  module:
+    - computed_field
+    - node
+id: node.field_10c_cash_on_hand
+field_name: field_10c_cash_on_hand
+entity_type: node
+type: computed_decimal
+settings:
+  precision: '20'
+  scale: '2'
+module: computed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

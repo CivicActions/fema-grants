@@ -1,0 +1,90 @@
+uuid: 6071e544-879e-4640-a03b-b359279c5ecb
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sf425.field_10a_cash_receipts
+    - field.field.node.sf425.field_10b_cash_disbursements
+    - field.field.node.sf425.field_10c_cash_on_hand
+    - field.field.node.sf425.field_10d_total_federal_funds
+    - field.field.node.sf425.field_10e_federal_share
+    - field.field.node.sf425.field_10f_federal_share_unliq
+    - field.field.node.sf425.field_10i_total_recipient_share
+    - field.field.node.sf425.field_10j_recipient_share_of_exp
+    - field.field.node.sf425.field_10l_total_federal_program
+    - field.field.node.sf425.field_10m_program_income_exp_alt
+    - field.field.node.sf425.field_10n_program_income_exp_alt
+    - field.field.node.sf425.field_1_federal_agency
+    - field.field.node.sf425.field_2_federal_grant_no
+    - field.field.node.sf425.field_3_recipient_organization
+    - field.field.node.sf425.field_4a_duns_number
+    - field.field.node.sf425.field_4b_ein
+    - field.field.node.sf425.field_5_recipient_account_number
+    - field.field.node.sf425.field_6_report_type
+    - field.field.node.sf425.field_7_basis_of_accounting
+    - field.field.node.sf425.field_8_project_grant_period
+    - field.field.node.sf425.field_9_reporting_period_end
+    - node.type.sf425
+  module:
+    - user
+id: node.sf425.teaser
+targetEntityType: node
+bundle: sf425
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_10a_cash_receipts: true
+  field_10b_cash_disbursements: true
+  field_10c_cash_on_hand: true
+  field_10d_total_federal_funds: true
+  field_10e_federal_share: true
+  field_10f_federal_share_unliq: true
+  field_10g_total_federal_share: true
+  field_10h_unobligated_balance: true
+  field_10i_total_recipient_share: true
+  field_10j_recipient_share_of_exp: true
+  field_10k_remaining_recipient: true
+  field_10l_total_federal_program: true
+  field_10m_program_income_exp_alt: true
+  field_10n_program_income_exp_alt: true
+  field_11a1_type_of_rate: true
+  field_11a2_type_of_rate: true
+  field_11b1_rate: true
+  field_11b2_rate: true
+  field_11c1_period: true
+  field_11c2_period: true
+  field_11d1_base: true
+  field_11d2_base: true
+  field_11e1_amount_charged: true
+  field_11e2_amount_charged: true
+  field_11f1_federal_share: true
+  field_11f2_federal_share: true
+  field_11g_total_amount_charged: true
+  field_11g_total_base: true
+  field_11g_total_federal_share: true
+  field_12_remarks: true
+  field_13a_first_name: true
+  field_13a_last_name: true
+  field_13a_middle_name: true
+  field_13a_prefix: true
+  field_13a_suffix: true
+  field_13a_title: true
+  field_13b_signature: true
+  field_13b_signature_drawn: true
+  field_13c_telephone_number: true
+  field_13d_email_address: true
+  field_13e_date_report_submitted: true
+  field_1_federal_agency: true
+  field_2_federal_grant_no: true
+  field_3_recipient_organization: true
+  field_4a_duns_number: true
+  field_4b_ein: true
+  field_5_recipient_account_number: true
+  field_6_report_type: true
+  field_7_basis_of_accounting: true
+  field_8_project_grant_period: true
+  field_9_reporting_period_end: true

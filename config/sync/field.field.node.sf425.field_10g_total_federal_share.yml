@@ -1,0 +1,26 @@
+uuid: d737d0f5-6cbe-4a0e-9e0f-eed0237ed733
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10g_total_federal_share
+    - node.type.sf425
+  module:
+    - computed_field
+id: node.sf425.field_10g_total_federal_share
+field_name: field_10g_total_federal_share
+entity_type: node
+bundle: sf425
+label: 'g) Total Federal share'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: "$value = 0;\r\nif (isset($fields['field_11b2_rafield_10e_federal_sharete'][0]['value']) && isset($fields['field_10f_federal_share_unliq'][0]['value'])) {\r\n  $value = $fields['field_10e_federal_share'][0]['value'] + $fields['field_10f_federal_share_unliq'][0]['value'];\r\n}"
+  prefix: $
+  suffix: ''
+field_type: computed_decimal

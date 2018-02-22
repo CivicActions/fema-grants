@@ -1,0 +1,19 @@
+uuid: 6ae66243-18a7-42f9-9cb8-006f52a343d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13b_signature
+    - node.type.sf425
+id: node.sf425.field_13b_signature
+field_name: field_13b_signature
+entity_type: node
+bundle: sf425
+label: 'b) Signature of Authorized Certifying Official'
+description: 'Typed (required) and printed (optional) signature of the authorized certifying official'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

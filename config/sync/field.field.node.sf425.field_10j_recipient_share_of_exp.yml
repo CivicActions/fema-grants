@@ -1,0 +1,25 @@
+uuid: 1a07690b-7ba2-4607-a4bd-7aec9fb3c3a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10j_recipient_share_of_exp
+    - node.type.sf425
+id: node.sf425.field_10j_recipient_share_of_exp
+field_name: field_10j_recipient_share_of_exp
+entity_type: node
+bundle: sf425
+label: 'j) Recipient share of expenditures'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: 999999999999.99
+  prefix: $
+  suffix: ''
+field_type: decimal

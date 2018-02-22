@@ -88,8 +88,14 @@ class Number extends FormElement {
       // Check that the input is an allowed multiple of #step (offset by #min if
       // #min is set).
       $offset = isset($element['#min']) ? $element['#min'] : 0.0;
+      $step = $element['#step'];
+      if (isset($element['#number_type']) && ($element['#number_type'] == 'decimal')) {
+        // PHP mangles the precision of floating-point arguments, so convert
+        // the step to string for non-floating-point numbers.
+        $step = (string) $element['#step'];
+      }
 
-      if (!NumberUtility::validStep($value, $element['#step'], $offset)) {
+      if (!NumberUtility::validStep($value, $step, $offset)) {
         $form_state->setError($element, t('%name is not a valid number.', ['%name' => $name]));
       }
     }

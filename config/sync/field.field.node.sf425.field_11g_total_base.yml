@@ -1,0 +1,26 @@
+uuid: 84f0f254-8d77-4a7e-b273-7af723b2d2e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11g_total_base
+    - node.type.sf425
+  module:
+    - computed_field
+id: node.sf425.field_11g_total_base
+field_name: field_11g_total_base
+entity_type: node
+bundle: sf425
+label: 'Total Base'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: "$value = 0;\r\nif (isset($fields['field_11d1_base'][0]['value']) && isset($fields['field_11d1_base'][0]['value'])) {\r\n  $value = $fields['field_11d1_base'][0]['value'] + $fields['field_11d1_base'][0]['value'];\r\n}"
+  prefix: $
+  suffix: ''
+field_type: computed_decimal

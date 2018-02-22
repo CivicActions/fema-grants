@@ -1,0 +1,25 @@
+uuid: 8cbd3705-6c11-42f3-8332-d005b7b18615
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10m_program_income_exp_alt
+    - node.type.sf425
+id: node.sf425.field_10m_program_income_exp_alt
+field_name: field_10m_program_income_exp_alt
+entity_type: node
+bundle: sf425
+label: 'm) Program Income expended in accordance with the deduction alternative'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: 999999999999.99
+  prefix: $
+  suffix: ''
+field_type: decimal

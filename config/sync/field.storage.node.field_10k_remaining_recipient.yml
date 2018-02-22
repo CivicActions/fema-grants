@@ -1,0 +1,21 @@
+uuid: 2f004bf3-ad62-4aef-b43e-9e5b111f2d6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - computed_field
+    - node
+id: node.field_10k_remaining_recipient
+field_name: field_10k_remaining_recipient
+entity_type: node
+type: computed_decimal
+settings:
+  precision: '20'
+  scale: '2'
+module: computed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

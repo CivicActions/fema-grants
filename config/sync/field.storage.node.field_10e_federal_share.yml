@@ -1,0 +1,20 @@
+uuid: f1c851d9-8ce0-46fa-82a4-1e62c00102d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_10e_federal_share
+field_name: field_10e_federal_share
+entity_type: node
+type: decimal
+settings:
+  precision: 20
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 58621665-7406-4f5e-b897-230d503ec744
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_8_project_grant_period
+    - node.type.sf425
+  module:
+    - datetime_range
+id: node.sf425.field_8_project_grant_period
+field_name: field_8_project_grant_period
+entity_type: node
+bundle: sf425
+label: '8) Project / Grant Period'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

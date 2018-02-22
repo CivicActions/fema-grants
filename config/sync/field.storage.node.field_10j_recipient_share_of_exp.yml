@@ -1,0 +1,20 @@
+uuid: 1ebfff8f-f06b-4221-ae98-9933dd2ab5f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_10j_recipient_share_of_exp
+field_name: field_10j_recipient_share_of_exp
+entity_type: node
+type: decimal
+settings:
+  precision: 20
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

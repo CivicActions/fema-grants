@@ -1,0 +1,26 @@
+uuid: 1d64977f-4281-4a80-8302-d0d6a7173187
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11g_total_amount_charged
+    - node.type.sf425
+  module:
+    - computed_field
+id: node.sf425.field_11g_total_amount_charged
+field_name: field_11g_total_amount_charged
+entity_type: node
+bundle: sf425
+label: 'Total Amount Charged'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: "$value = 0;\r\nif (isset($fields['field_11b1_rate'][0]['value']) && isset($fields['field_11d1_base'][0]['value']) && isset($fields['field_11b2_rate'][0]['value']) && isset($fields['field_11d2_base'][0]['value'])) {\r\n  $value = ($fields['field_11b1_rate'][0]['value'] * $fields['field_11d1_base'][0]['value']) + ($fields['field_11b2_rate'][0]['value'] * $fields['field_11d2_base'][0]['value']);\r\n}"
+  prefix: $
+  suffix: ''
+field_type: computed_decimal

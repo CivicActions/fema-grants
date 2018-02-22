@@ -1,0 +1,21 @@
+uuid: ac926ba5-9eac-4639-834a-3d510b6070fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11c2_period
+    - node.type.sf425
+  module:
+    - datetime_range
+id: node.sf425.field_11c2_period
+field_name: field_11c2_period
+entity_type: node
+bundle: sf425
+label: 'c) Period'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange
