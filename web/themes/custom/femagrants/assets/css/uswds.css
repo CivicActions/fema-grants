@@ -3706,3 +3706,17 @@ input[type=search] {
   content: "";
   display: table;
   clear: both; }
+
+.field {
+  clear: left;
+  padding: 2rem 0; }
+
+.field__label {
+  font-weight: bold;
+  width: 40%;
+  float: left;
+  padding-right: 2rem; }
+
+.field__item {
+  width: 60%;
+  float: left; }

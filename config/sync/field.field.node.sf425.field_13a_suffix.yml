@@ -1,0 +1,19 @@
+uuid: 8ebcf408-693f-4c1f-a6e1-b9a24888c8f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13a_suffix
+    - node.type.sf425
+id: node.sf425.field_13a_suffix
+field_name: field_13a_suffix
+entity_type: node
+bundle: sf425
+label: Suffix
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

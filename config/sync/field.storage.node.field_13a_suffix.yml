@@ -1,0 +1,21 @@
+uuid: beb93a0d-a698-4f36-8611-b13dd7fd8581
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_13a_suffix
+field_name: field_13a_suffix
+entity_type: node
+type: string
+settings:
+  max_length: 10
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

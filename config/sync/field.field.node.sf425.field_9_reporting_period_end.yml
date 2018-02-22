@@ -1,0 +1,21 @@
+uuid: ba65c196-dc47-4bf2-88f4-197724717024
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_9_reporting_period_end
+    - node.type.sf425
+  module:
+    - datetime
+id: node.sf425.field_9_reporting_period_end
+field_name: field_9_reporting_period_end
+entity_type: node
+bundle: sf425
+label: '9) Reporting Period End Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

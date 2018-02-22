@@ -13,7 +13,6 @@ function femagrants_form_node_form_alter(&$form, FormStateInterface $form_state,
     $form['field_3_recipient_organization']['widget'][0]['#collapsible'] = false;
     $form['field_3_recipient_organization']['widget'][0]['#type'] = 'container';
     $form['#validate'][] = 'femagrants_form_node_sf425_validate';
-    $form_state->setValue('title', 'test');
   }
 }
 
@@ -36,5 +35,19 @@ function femagrants_form_node_sf425_validate(&$form, FormStateInterface $form_st
     if (!preg_match('/^^\d{2}\-?\d{7}$/', $ein[0]['value'])) {
       $form_state->setErrorByName('field_4b_ein', t('EIN must be 9 digits with an optional hypen.'));
     }
+  }
+  $m = 0;
+  if ($form_state->hasValue('field_10m_program_income_exp_alt')) {
+    $field = $form_state->getValue('field_10m_program_income_exp_alt');
+    $m = $field[0]['value'];
+  }
+  $n = 0;
+  if ($form_state->hasValue('field_10n_program_income_exp_alt')) {
+    $field = $form_state->getValue('field_10n_program_income_exp_alt');
+    $n = $field[0]['value'];
+  }
+  if (($m > 0) && ($n > 0)) {
+    $form_state->setErrorByName('field_10m_program_income_exp_alt', t('Either the Program Income expended in accordance with the deduction alternative (field m) or the addition alternative (field n) must be zero.'));
+    $form_state->setErrorByName('field_10n_program_income_exp_alt', t('Either the Program Income expended in accordance with the deduction alternative (field m) or the addition alternative (field n) must be zero.'));
   }
 }

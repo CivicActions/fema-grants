@@ -1,0 +1,7 @@
+status: '1'
+pattern: '[node:author] SF425 submission dated [node:created]'
+php: 0
+escape: 0
+dependencies:
+  config:
+    - node.type.sf425

@@ -1,0 +1,21 @@
+uuid: 3fabd04f-7a67-4085-a5ed-d9e520fdfbff
+langcode: en
+status: true
+dependencies:
+  module:
+    - computed_field
+    - node
+id: node.field_11g_total_amount_charged
+field_name: field_11g_total_amount_charged
+entity_type: node
+type: computed_decimal
+settings:
+  precision: '20'
+  scale: '2'
+module: computed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

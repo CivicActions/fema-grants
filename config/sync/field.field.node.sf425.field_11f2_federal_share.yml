@@ -1,0 +1,25 @@
+uuid: dd65fbdb-6035-4448-a56f-4829d79d7561
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11f2_federal_share
+    - node.type.sf425
+id: node.sf425.field_11f2_federal_share
+field_name: field_11f2_federal_share
+entity_type: node
+bundle: sf425
+label: 'f) Federal Share'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: 999999999999.99
+  prefix: $
+  suffix: ''
+field_type: decimal

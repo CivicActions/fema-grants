@@ -1,0 +1,21 @@
+uuid: 91c1392c-4e57-4d49-93c4-fa27f14ddf8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_7_basis_of_accounting
+    - node.type.sf425
+  module:
+    - options
+id: node.sf425.field_7_basis_of_accounting
+field_name: field_7_basis_of_accounting
+entity_type: node
+bundle: sf425
+label: '7) Basis of Accounting'
+description: "Specify whether a cash or accrual basis was used for recording transactions related to the award(s) and for preparing this FFR.\r\nAccrual basis of accounting refers to the accounting method in which expenses are recorded when incurred. For cash basis accounting, expenses are recorded when they are paid."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

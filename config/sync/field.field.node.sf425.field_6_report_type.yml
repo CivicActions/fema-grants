@@ -1,0 +1,21 @@
+uuid: 6713bb13-d1d2-4f52-83f6-c749738212c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_6_report_type
+    - node.type.sf425
+  module:
+    - options
+id: node.sf425.field_6_report_type
+field_name: field_6_report_type
+entity_type: node
+bundle: sf425
+label: '6) Report Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

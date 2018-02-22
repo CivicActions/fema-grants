@@ -1,0 +1,24 @@
+uuid: a5598c5a-1734-41cb-a878-2090d1208690
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13e_date_report_submitted
+    - node.type.sf425
+  module:
+    - datetime
+id: node.sf425.field_13e_date_report_submitted
+field_name: field_13e_date_report_submitted
+entity_type: node
+bundle: sf425
+label: 'e) Date Report Submitted'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,25 @@
+uuid: fdbaa5db-d1a9-42a0-9339-df83e48105ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11d2_base
+    - node.type.sf425
+id: node.sf425.field_11d2_base
+field_name: field_11d2_base
+entity_type: node
+bundle: sf425
+label: 'd) Base'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: 999999999999.99
+  prefix: $
+  suffix: ''
+field_type: decimal

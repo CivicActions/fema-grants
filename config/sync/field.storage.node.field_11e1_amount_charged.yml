@@ -1,0 +1,21 @@
+uuid: 5a7caa48-097f-45ca-8b24-3f0da846a994
+langcode: en
+status: true
+dependencies:
+  module:
+    - computed_field
+    - node
+id: node.field_11e1_amount_charged
+field_name: field_11e1_amount_charged
+entity_type: node
+type: computed_decimal
+settings:
+  precision: '20'
+  scale: '2'
+module: computed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

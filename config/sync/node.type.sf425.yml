@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Federal Financial Report'
 type: sf425
-description: 'SF425-V1.0 (OMB Number: 4040-0014)'
+description: 'Standard Form 425 Version 1.0 (OMB Number: 4040-0014)'
 help: ''
 new_revision: true
 preview_mode: 0

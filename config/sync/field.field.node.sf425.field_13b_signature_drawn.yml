@@ -1,0 +1,21 @@
+uuid: ac81b782-faf0-4663-9273-48ad6dc17235
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13b_signature_drawn
+    - node.type.sf425
+  module:
+    - signature_field
+id: node.sf425.field_13b_signature_drawn
+field_name: field_13b_signature_drawn
+entity_type: node
+bundle: sf425
+label: 'Printed Signature'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_signature

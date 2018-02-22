@@ -1,0 +1,21 @@
+uuid: 76205dda-db7e-41ee-bbdd-2e6b76e6a399
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13c_telephone_number
+    - node.type.sf425
+  module:
+    - telephone
+id: node.sf425.field_13c_telephone_number
+field_name: field_13c_telephone_number
+entity_type: node
+bundle: sf425
+label: 'c) Telephone Number'
+description: 'Enter the daytime Telephone Number, including Area code and extension'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

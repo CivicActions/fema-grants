@@ -1,0 +1,25 @@
+uuid: 26490858-66f0-4844-ad0c-0eb4e24e6213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10f_federal_share_unliq
+    - node.type.sf425
+id: node.sf425.field_10f_federal_share_unliq
+field_name: field_10f_federal_share_unliq
+entity_type: node
+bundle: sf425
+label: 'f) Federal share of unliquidated obligations'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: 999999999999.99
+  prefix: $
+  suffix: ''
+field_type: decimal

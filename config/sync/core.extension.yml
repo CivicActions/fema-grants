@@ -1,6 +1,7 @@
 module:
   address: 0
   admin_toolbar: 0
+  auto_entitylabel: 0
   big_pipe: 0
   block: 0
   breakpoint: 0
@@ -35,7 +36,9 @@ module:
   path: 0
   responsive_image: 0
   search: 0
+  select_text_value: 0
   serialization: 0
+  signature_field: 0
   statistics: 0
   syslog: 0
   system: 0

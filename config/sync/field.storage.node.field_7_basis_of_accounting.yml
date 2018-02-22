@@ -1,0 +1,27 @@
+uuid: 5c18311a-dc6b-4716-bc62-dbe5a9c9d9a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_7_basis_of_accounting
+field_name: field_7_basis_of_accounting
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: cash
+      label: Cash
+    -
+      value: accrual
+      label: Accrual
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
