@@ -16,11 +16,6 @@
                 "href": "http:\/\/default\/user\/6?_format=hal_json",
                 "lang": "en"
             }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/report\/field_12_1_remarks": [
-            {
-                "href": "http:\/\/default\/sites\/default\/files\/2018-02\/FEMA%20privacy%20policy.txt"
-            }
         ]
     },
     "nid": [
@@ -35,7 +30,7 @@
     ],
     "vid": [
         {
-            "value": 14
+            "value": 2
         }
     ],
     "langcode": [
@@ -89,28 +84,6 @@
                     }
                 ],
                 "lang": "en"
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/report\/field_12_1_remarks": [
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/default\/sites\/default\/files\/2018-02\/FEMA%20privacy%20policy.txt"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "db511065-56d0-4c14-bee4-3feb968f4fee"
-                    }
-                ],
-                "uri": [
-                    {
-                        "value": "http:\/\/default\/sites\/default\/files\/2018-02\/FEMA%20privacy%20policy.txt"
-                    }
-                ]
             }
         ]
     },
