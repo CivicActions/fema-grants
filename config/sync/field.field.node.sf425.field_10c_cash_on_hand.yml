@@ -20,7 +20,7 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  code: '$value = $fields[''field_10a_cash_receipts''][0][''value''] - $fields[''field_10b_cash_disbursements''][0][''value''];'
+  code: "$value = 0;\r\nif (isset($fields['field_10a_cash_receipts'][0]['value']) && isset($fields['field_10b_cash_disbursements'][0]['value'])) {\r\n  $value = $fields['field_10a_cash_receipts'][0]['value'] - $fields['field_10b_cash_disbursements'][0]['value'];\r\n}"
   prefix: $
   suffix: ''
 field_type: computed_decimal

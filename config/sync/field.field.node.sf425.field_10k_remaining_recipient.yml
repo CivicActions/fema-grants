@@ -20,7 +20,7 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  code: "$value = $fields['field_10i_total_recipient_share'][0]['value'] - $fields['field_10j_recipient_share_of_exp'][0]['value'];\r\nif ($value < 0) {\r\n  $value = 0;\r\n}"
+  code: "$value = 0;\r\nif (isset($fields['field_10i_total_recipient_share'][0]['value']) && isset($fields['field_10j_recipient_share_of_exp'][0]['value'])) {\r\n  $value = $fields['field_10i_total_recipient_share'][0]['value'] - $fields['field_10j_recipient_share_of_exp'][0]['value'];\r\n}\r\nif ($value < 0) {\r\n  $value = 0;\r\n}"
   prefix: $
   suffix: ''
 field_type: computed_decimal
