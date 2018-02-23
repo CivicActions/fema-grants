@@ -54,6 +54,7 @@ dependencies:
     - field.field.node.sf425.field_7_basis_of_accounting
     - field.field.node.sf425.field_8_project_grant_period
     - field.field.node.sf425.field_9_reporting_period_end
+    - field.field.node.sf425.field_review_status
     - node.type.sf425
   module:
     - address
@@ -761,6 +762,13 @@ content:
       format_type: short
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_review_status:
+    weight: 27
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
 hidden:
   links: true

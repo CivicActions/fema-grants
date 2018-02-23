@@ -3,15 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 id: review_status_unassigned_under_review
-label: Assign
+label: 'Assign for review'
 module: null
 from_sid: review_status_unassigned
 to_sid: review_status_under_review
 roles:
   analyst: analyst
   workflow_author: '0'
-  anonymous: '0'
-  authenticated: '0'
   administratror: '0'
   grantee: '0'
   specialist: '0'

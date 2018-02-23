@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: review_status_unassigned_unassigned
-label: ''
+label: 'Leave awaiting assignment'
 module: null
 from_sid: review_status_unassigned
 to_sid: review_status_unassigned

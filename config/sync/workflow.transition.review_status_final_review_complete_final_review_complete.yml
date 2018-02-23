@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: review_status_final_review_complete_final_review_complete
-label: ''
+label: 'Leave as final review approved'
 module: null
 from_sid: review_status_final_review_complete
 to_sid: review_status_final_review_complete

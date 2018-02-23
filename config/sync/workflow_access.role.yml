@@ -144,70 +144,86 @@ internal_status_rejected_by_analyst:
     grant_update: true
     grant_delete: true
 review_status_unassigned:
-  administratror:
+  workflow_author:
     grant_view: true
-    grant_update: 0
-    grant_delete: true
+    grant_update: true
+    grant_delete: 0
   analyst:
     grant_view: true
     grant_update: true
-    grant_delete: true
+    grant_delete: 0
   specialist:
     grant_view: true
     grant_update: 0
-    grant_delete: true
-  workflow_author:
+    grant_delete: 0
+  administratror:
+    grant_view: 0
+    grant_update: 0
+    grant_delete: 0
+  grantee:
     grant_view: 0
     grant_update: 0
     grant_delete: 0
 review_status_under_review:
-  administratror:
-    grant_view: true
-    grant_update: true
-    grant_delete: true
+  workflow_author:
+    grant_view: 0
+    grant_update: 0
+    grant_delete: 0
   analyst:
     grant_view: true
     grant_update: true
-    grant_delete: true
+    grant_delete: 0
   specialist:
     grant_view: true
     grant_update: true
-    grant_delete: true
-  workflow_author:
+    grant_delete: 0
+  administratror:
+    grant_view: 0
+    grant_update: 0
+    grant_delete: 0
+  grantee:
     grant_view: 0
     grant_update: 0
     grant_delete: 0
 review_status_awaiting_final_review:
-  administratror:
-    grant_view: true
-    grant_update: true
-    grant_delete: true
-  analyst:
-    grant_view: true
-    grant_update: true
-    grant_delete: true
-  specialist:
-    grant_view: true
-    grant_update: true
-    grant_delete: true
   workflow_author:
     grant_view: 0
     grant_update: 0
     grant_delete: 0
-review_status_final_review_complete:
-  administratror:
-    grant_view: true
-    grant_update: 0
-    grant_delete: true
   analyst:
     grant_view: true
     grant_update: true
-    grant_delete: true
+    grant_delete: 0
   specialist:
     grant_view: true
-    grant_update: true
-    grant_delete: true
+    grant_update: 0
+    grant_delete: 0
+  administratror:
+    grant_view: 0
+    grant_update: 0
+    grant_delete: 0
+  grantee:
+    grant_view: 0
+    grant_update: 0
+    grant_delete: 0
+review_status_final_review_complete:
   workflow_author:
+    grant_view: 0
+    grant_update: 0
+    grant_delete: 0
+  analyst:
+    grant_view: true
+    grant_update: true
+    grant_delete: 0
+  specialist:
+    grant_view: true
+    grant_update: 0
+    grant_delete: 0
+  administratror:
+    grant_view: 0
+    grant_update: 0
+    grant_delete: 0
+  grantee:
     grant_view: 0
     grant_update: 0
     grant_delete: 0

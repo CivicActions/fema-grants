@@ -9,6 +9,4 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'create review_status workflow_transition'
   - 'create update_internal_status workflow_transition'
-  - 'view own unpublished content'

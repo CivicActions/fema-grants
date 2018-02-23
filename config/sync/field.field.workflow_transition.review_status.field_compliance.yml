@@ -13,7 +13,7 @@ entity_type: workflow_transition
 bundle: review_status
 label: Compliance
 description: ''
-required: false
+required: true
 translatable: true
 default_value:
   -

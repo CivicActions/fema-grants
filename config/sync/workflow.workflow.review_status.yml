@@ -8,7 +8,7 @@ module: null
 options:
   name_as_title: 0
   fieldset: 0
-  options: select
+  options: buttons
   schedule_timezone: 0
   comment_log_node: 1
   watchdog_log: 1

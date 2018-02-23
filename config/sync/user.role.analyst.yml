@@ -27,5 +27,6 @@ permissions:
   - 'schedule internal_status workflow_transition'
   - 'use text format filtered_html'
   - 'view grant revisions'
+  - 'view own unpublished content'
   - 'view report revisions'
   - 'view sf425 revisions'

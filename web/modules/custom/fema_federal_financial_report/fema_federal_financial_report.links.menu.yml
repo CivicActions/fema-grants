@@ -7,11 +7,19 @@ fema_fedearal_financial_report.admin-1:
   weight: 200
 
 fema_fedearal_financial_report.admin-2:
+  title: 'Manage Workflow Configuration'
+  description: ''
+  parent: main
+  menu_name: main
+  url: internal:/admin/config/workflow/workflow/review_status/transition_roles
+  weight: 300
+
+fema_fedearal_financial_report.admin-3:
   title: 'Privacy Policies'
-  description: 'Privacy Policies'
+  description: ''
   parent: main
   menu_name: main
   url: internal:/node/1
-  weight: 200
+  weight: 400
 
 
