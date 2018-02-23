@@ -10,8 +10,6 @@ to_sid: review_status_awaiting_final_review
 roles:
   specialist: specialist
   workflow_author: '0'
-  anonymous: '0'
-  authenticated: '0'
   administratror: '0'
   grantee: '0'
   analyst: '0'

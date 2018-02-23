@@ -54,6 +54,7 @@ dependencies:
     - field.field.node.sf425.field_7_basis_of_accounting
     - field.field.node.sf425.field_8_project_grant_period
     - field.field.node.sf425.field_9_reporting_period_end
+    - field.field.node.sf425.field_review_status
     - node.type.sf425
   module:
     - address
@@ -61,9 +62,11 @@ dependencies:
     - datetime_range
     - field_group
     - file
+    - path
     - select_text_value
     - signature_field
     - telephone
+    - workflow
 third_party_settings:
   field_group:
     group_steps:
@@ -245,6 +248,12 @@ targetEntityType: node
 bundle: sf425
 mode: default
 content:
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_10a_cash_receipts:
     weight: 28
     settings:
@@ -552,8 +561,49 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_review_status:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: workflow_default
+    region: content
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
-  created: true
   field_10c_cash_on_hand: true
   field_10g_total_federal_share: true
   field_10h_unobligated_balance: true
@@ -563,9 +613,4 @@ hidden:
   field_11g_total_amount_charged: true
   field_11g_total_base: true
   field_11g_total_federal_share: true
-  path: true
-  promote: true
-  status: true
-  sticky: true
   title: true
-  uid: true

@@ -1,6 +1,7 @@
 #!/bin/bash -e
 set -e
 DRUSH=/app/src/vendor/bin/drush
+DRUPAL=/app/src/vendor/bin/drupal
 
 echo "Installing Drupal"
 $DRUSH -y site:install minimal --account-pass=civicactions --sites-subdir=default --db-url=mysql://dbuser:dbpass@db:3306/drupal --config-dir=/app/src/config/sync
@@ -24,6 +25,9 @@ echo "Setting passwords"
 for NAME in $($DRUSH sqlq "SELECT name FROM users_field_data WHERE uid > 0"); do
   $DRUSH user:password "${NAME}" "civicactions"
 done
+
+echo "Rebuilding node access"
+$DRUPAL --root=/app/src/docroot node:access:rebuild
 
 echo "Rebuilding cache"
 $DRUSH cache:rebuild
