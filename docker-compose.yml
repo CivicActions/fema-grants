@@ -7,6 +7,8 @@ services:
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=dbpass
       - MYSQL_DATABASE=drupal
+    networks:
+      - web
   web:
     image: civicactions/fema-grants
     volumes:
@@ -15,3 +17,7 @@ services:
       - db
     ports:
       - "8118:80"
+    networks:
+      - web
+networks:
+  web:

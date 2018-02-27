@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+docker-compose -f docker-compose.yml -f docker-compose.testing.yml up --build -d
+echo
+echo "Gemini GUI running at http://localhost:8119/"
+echo "Review test results then either:"
+echo "* Fix issues in code then re-run failing tests until passing"
+echo "* Accept changes to update baseline (only if the changes are correct and expected)"
+echo
+read -p "Press [Enter] key when review is complete..."
+docker-compose -f docker-compose.yml -f docker-compose.testing.yml stop hub gemini
+echo
+echo "If you have updated the baseline, remember to commit you changes!"
+git status tests/visual/gemini

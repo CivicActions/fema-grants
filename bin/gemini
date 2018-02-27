@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+CMD="docker-compose -f docker-compose.yml -f docker-compose.testing.yml run --rm gemini gemini"
+if [ "$1" == "" ]; then
+   # Make no arguments a bit more friendly.
+   $CMD "--help"
+   exit 0
+fi
+$CMD "$@" 2> /dev/null

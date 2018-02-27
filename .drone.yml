@@ -5,12 +5,21 @@ workspace:
 pipeline:
   test:
     image: civicactions/fema-grants:latest
+    pull: true
     commands:
       - sleep 20
       - timeout 300 bash -c 'until curl -m1 -s http://web > /dev/null; do sleep 0.5; done'
       - drush --root=/app/src/docroot core:status
       - /app/src/vendor/bin/behat -c /app/src/tests/behat.yml
       - cd /app/src/web/core && phpunit --testsuite=unit --exclude-group=DependencyInjection,Composer
+  gemini:
+    image: civicactions/docker-gemini:latest
+    pull: true
+    environment:
+      - NODE_NO_WARNINGS=1
+    commands:
+      - cd /app/src/tests/visual
+      - gemini test .
   slack:
     image: plugins/slack
     channel: proposal-fema
@@ -21,6 +30,7 @@ pipeline:
 services:
   db:
     image: mariadb:10.3
+    pull: true
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USER=dbuser
@@ -28,3 +38,19 @@ services:
       - MYSQL_DATABASE=drupal
   web:
     image: civicactions/fema-grants:latest
+    pull: true
+  hub:
+    image: selenium/hub:3.9.1-actinium
+    pull: true
+  chrome:
+    image: selenium/node-chrome:3.9.1-actinium
+    pull: true
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+  firefox:
+    image: selenium/node-firefox:2.53.1
+    pull: true
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
