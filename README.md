@@ -1,5 +1,13 @@
 # FEMA SF-425 Prototype
 
+## Requirements
+
+* Git - https://git-scm.com/downloads
+* Docker - https://www.docker.com/community-edition
+ * Docker Compose
+ * Docker Machine (for deployment of DevOps pipeline and hosting environment)
+* Git LFS (for Visual Regression Testing) - https://git-lfs.github.com/
+
 ## Sandbox Instructions
 
 Run the following:
@@ -57,6 +65,35 @@ Always create a new branch to work on each user story or change.
 *  Add the UUIDs associated with the new NIDs to `web/modules/custom/fema_federal_financial_report/fema_federal_financial_report.info.yml` 
 * Run `drush dcem fema_federal_financial_report` and commit those results.
 * Not sure if all your changes work? Test your work by recreating your sandbox with your current code (see above).
+
+## Testing
+
+To run unit tests:
+```
+phpunit
+```
+
+To run functional behavior driven (BDD) tests:
+```
+behat
+```
+
+### Visual Regression Testing
+
+To start visual regression testing, install LFS from https://git-lfs.github.com/ and make sure you have LFS enabled for this repo:
+```
+git lfs install --local
+```
+
+To quickly run tests - note `.` on the end which will run all tests in the tests/visual directory:
+```
+gemini test .
+```
+
+To to use the Gemeni GUI to visually review test results, rerun failing tests to resolve issues and (if needed) approve changes to the baseline images:
+```
+gemini-gui
+```
 
 ## Docker image development
 
