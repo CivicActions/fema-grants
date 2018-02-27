@@ -1,0 +1,51 @@
+version: '3'
+services:
+  gemini:
+    image: civicactions/docker-gemini:latest
+    volumes:
+      - ./tests/visual:/home/node/app
+    command: gemini-gui -a --hostname=0.0.0.0 .
+    environment:
+      NODE_NO_WARNINGS: 1
+    depends_on:
+      - web
+      - chrome
+      - firefox
+    ports:                                                                                                                                                                                                      
+      - "8119:8000"
+    networks:
+      - web
+  hub:
+    image: selenium/hub:3.9.1-actinium
+    networks:
+      - web
+  chrome:
+    image: selenium/node-chrome:3.9.1-actinium
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    expose:
+      - "5555"
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - web
+      - hub
+    networks:
+      - web
+  firefox:
+    image: selenium/node-firefox:2.53.1
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    expose:
+      - "5555"
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - web
+      - hub
+    networks:
+      - web
+networks:
+  web:

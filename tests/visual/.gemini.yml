@@ -1,0 +1,28 @@
+rootUrl: http://web
+gridUrl: http://hub:4444/wd/hub
+
+browsers:
+  chrome-desktop:
+    desiredCapabilities:
+      browserName: chrome
+      windowSize: 1920x1080
+  chrome-mobile-high:
+    desiredCapabilities:
+      browserName: chrome
+      windowSize: 1366x768
+  chrome-mobile-low:
+    desiredCapabilities:
+      browserName: chrome
+      windowSize: 360x640
+  firefox-desktop:
+    desiredCapabilities:
+      browserName: firefox
+      windowSize: 1920x1080
+  firefox-mobile-high:
+    desiredCapabilities:
+      browserName: firefox
+      windowSize: 1366x768
+  firefox-mobile-low:
+    desiredCapabilities:
+      browserName: firefox
+      windowSize: 360x640
