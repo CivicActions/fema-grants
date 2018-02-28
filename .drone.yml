@@ -29,6 +29,13 @@ pipeline:
       - /home/node/entrypoint.sh node pa11y.js
     cap_add:
       - SYS_ADMIN
+  zap:
+    image: owasp/zap2docker-stable
+    commands:
+      - mkdir -p /zap/wrk
+      - cd /zap/wrk
+      - cp -R /app/src/tests/security/* .
+      - zap-baseline.py -d -t http://web -c gen.conf
   slack:
     image: plugins/slack
     pull: true

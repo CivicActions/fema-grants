@@ -95,6 +95,9 @@ AddEncoding gzip svgz
   # downloaded.
   RewriteRule "/\.|^\.(?!well-known/)" - [F]
 
+  # Redirect some paths that don't shouldn't be accessed directly.
+  RewriteRule "^core|^profiles|^web.config" / [L,R=301]
+
   # If your site can be accessed both with and without the 'www.' prefix, you
   # can use one of the following settings to redirect users to your preferred
   # URL, either WITH or WITHOUT the 'www.' prefix. Choose ONLY one option:
@@ -186,4 +189,6 @@ AddEncoding gzip svgz
   Header always set X-Content-Type-Options nosniff
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
+
+  Header set X-XSS-Protection "1; mode=block"
 </IfModule>
