@@ -3,7 +3,7 @@ fema_fedearal_financial_report.admin-1:
   description: 'Create a new SF-425 Report'
   parent: main
   menu_name: main
-  url: internal:/node/add/report
+  url: internal:/node/add/sf425
   weight: 200
 
 fema_fedearal_financial_report.admin-2:
