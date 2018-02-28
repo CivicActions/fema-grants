@@ -1,0 +1,13 @@
+version: '3'
+services:
+  zap:
+    image: owasp/zap2docker-stable
+    volumes:
+      - ./tests/security:/zap/wrk
+    command: zap-baseline.py -d -t http://web -c gen.conf
+    depends_on:
+      - web
+    networks:
+      - web
+networks:
+  web:

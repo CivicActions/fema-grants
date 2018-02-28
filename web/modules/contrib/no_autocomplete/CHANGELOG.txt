@@ -1,0 +1,22 @@
+No Autocomplete 8.1.2, 2018-01-31
+---------------------------------
+Changes since 8.x-1.1:
+
+- #2927940 by adriancid: \Drupal calls should be avoided in classes, use
+  dependency injection instead.
+- #2927942 by adriancid: Fix the release version in the CHANGELOG.txt.
+
+No Autocomplete 8.1.1, 2017-11-21
+---------------------------------
+Changes since 8.x-1.0:
+
+- #2925359 by adriancid: Remove the functionalities that allows to see the drush
+  commands in the module help page.
+- #2921607 by adriancid: Change the placeholder @variable to :variable for urls
+  in t() calls.
+- #2908595 by adriancid: Add the summary section to the drush command help.
+- #2892499 by adriancid: Change the drush error codes.
+
+No Autocomplete  8.1.0, 2017-05-19
+----------------------------------
+- Initial release.
