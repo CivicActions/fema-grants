@@ -96,7 +96,7 @@ AddEncoding gzip svgz
   RewriteRule "/\.|^\.(?!well-known/)" - [F]
 
   # Redirect some paths that don't shouldn't be accessed directly.
-  RewriteRule "^core|^profiles|^web.config" / [L,R=301]
+  RewriteRule "^(core|profiles|web.config)/?$" / [L,R=301]
 
   # If your site can be accessed both with and without the 'www.' prefix, you
   # can use one of the following settings to redirect users to your preferred
