@@ -166,7 +166,7 @@ review_status_unassigned:
     grant_delete: 0
 review_status_under_review:
   workflow_author:
-    grant_view: 0
+    grant_view: true
     grant_update: 0
     grant_delete: 0
   analyst:
@@ -187,7 +187,7 @@ review_status_under_review:
     grant_delete: 0
 review_status_awaiting_final_review:
   workflow_author:
-    grant_view: 0
+    grant_view: true
     grant_update: 0
     grant_delete: 0
   analyst:
@@ -208,7 +208,7 @@ review_status_awaiting_final_review:
     grant_delete: 0
 review_status_final_review_complete:
   workflow_author:
-    grant_view: 0
+    grant_view: true
     grant_update: 0
     grant_delete: 0
   analyst:
