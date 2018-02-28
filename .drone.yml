@@ -20,8 +20,18 @@ pipeline:
     commands:
       - cd /app/src/tests/visual
       - gemini test .
+  pa11y:
+    image: civicactions/docker-pa11y:latest
+    pull: true
+    commands:
+      - cd /home/node/app
+      - cp -R /app/src/tests/accessibility/* .
+      - /home/node/entrypoint.sh node pa11y.js
+    cap_add:
+      - SYS_ADMIN
   slack:
     image: plugins/slack
+    pull: true
     channel: proposal-fema
     secrets: [ slack_webhook ]
     when:
