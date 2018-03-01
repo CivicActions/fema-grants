@@ -14,7 +14,5 @@ permissions:
   - 'create sf425 content'
   - 'create update_internal_status workflow_transition'
   - 'edit own grant content'
-  - 'edit own report content'
-  - 'edit own sf425 content'
   - 'use text format filtered_html'
   - 'view own unpublished content'

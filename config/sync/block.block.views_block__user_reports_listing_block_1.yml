@@ -1,0 +1,38 @@
+uuid: de72c4e5-0cd7-4751-8485-002ee6b5bc42
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_reports_listing
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - femagrants
+id: views_block__user_reports_listing_block_1
+theme: femagrants
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:user_reports_listing-block_1'
+settings:
+  id: 'views_block:user_reports_listing-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      analyst: analyst
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

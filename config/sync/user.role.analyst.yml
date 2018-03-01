@@ -15,6 +15,7 @@ permissions:
   - 'access own internal_status workflow_transion overview'
   - 'access own review_status workflow_transion overview'
   - 'access review_status workflow_transition form'
+  - 'access user profiles'
   - 'administer blocks'
   - 'administer workflow'
   - 'create internal_status workflow_transition'

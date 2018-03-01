@@ -6,22 +6,9 @@ package: 'Custom'
 
 default_content:
   node:
-    - 115fd11e-b9c3-40f3-8b48-943be6a47328
-    - 2bc22df8-dbdb-481c-81bf-11f558d7176a
-    - 3c624fc5-c5cb-4197-9506-af7505dce4cb
-    - 40139cc2-477d-4bc3-a0be-4374dc5fa711
-    - 563f660e-2c4c-44f7-81c8-c18de8f1c9de
-    - 633836f3-ed9e-4df2-b379-012ee385c69c
-    - 79fca3c0-1096-42b6-b444-9587b70c30c1
-    - 8670cf35-30ef-400b-9c04-92c0237bd9f9
-    - 87460f11-2e44-44b1-be23-3bc54d5d12a4
-    - ba9836db-197e-484b-b5a7-fbf9a28e1c04
-    - cc88b7a0-6b7a-4dba-9907-76d560f7cc02
-    - ed43afdc-bf15-4074-8992-0a278baf1994
-    - 8609b3fc-813d-45b9-aaa4-a4e9a23b0ca6
-    - a31b7824-2900-483e-9e32-7b3775bf628a
-    - 6f0c3827-e352-424c-b049-5c58e56afae7
     - 1e25a42b-e280-4e6e-abc7-f03b2e2a0af7
+    - 6f0c3827-e352-424c-b049-5c58e56afae7
+    - 8670cf35-30ef-400b-9c04-92c0237bd9f9
     - bb5db3eb-6278-4650-b4f1-70ae57de749d
   user:
     - 0b27811f-fc05-497b-b6d4-a0fa06d238b1

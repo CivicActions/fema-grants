@@ -10,7 +10,7 @@ pipeline:
       - sleep 20
       - timeout 300 bash -c 'until curl -m1 -s http://web > /dev/null; do sleep 0.5; done'
       - drush --root=/app/src/docroot core:status
-      - /app/src/vendor/bin/behat -c /app/src/tests/behat.yml
+      - /app/src/vendor/bin/behat -c /app/src/tests/bdd/behat.yml
       - cd /app/src/web/core && phpunit --testsuite=unit --exclude-group=DependencyInjection,Composer
   gemini:
     image: civicactions/docker-gemini:latest
