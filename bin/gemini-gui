@@ -8,7 +8,7 @@ echo "* Fix issues in code then re-run failing tests until passing"
 echo "* Accept changes to update baseline (only if the changes are correct and expected)"
 echo
 read -p "Press [Enter] key when review is complete..."
-docker-compose -f docker-compose.yml -f docker-compose.testing.yml stop hub gemini
+docker-compose -f docker-compose.yml -f docker-compose.testing.yml stop hub gemini chrome firefox
 echo
 echo "If you have updated the baseline, remember to commit you changes!"
 git status tests/visual/gemini
