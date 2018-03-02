@@ -19,7 +19,8 @@ ENV PATH="$PATH:/app/src/vendor/bin"
 
 # Copy in code so this can be used as a production image also.
 COPY . /app/src
+WORKDIR /app/src/web
 
 # Custom entrypoint.
-COPY .docker/docker-entrypoint.sh /
-ENTRYPOINT ["/docker-entrypoint.sh"]
+COPY .docker/docker-entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]

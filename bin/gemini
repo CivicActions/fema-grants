@@ -6,4 +6,4 @@ if [ "$1" == "" ]; then
    $CMD "--help"
    exit 0
 fi
-$CMD "$@" 2> /dev/null
+$CMD "$@"
