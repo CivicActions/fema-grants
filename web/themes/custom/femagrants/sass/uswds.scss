@@ -2,7 +2,7 @@
 @import "_variables.scss";
 // Import the USWDS source.
 @import "../node_modules/uswds/src/stylesheets/uswds.scss";
-
+#user-login-form label { font-weight: bold; }
 .field--widget-number {
   .field-prefix {
     display: none;
