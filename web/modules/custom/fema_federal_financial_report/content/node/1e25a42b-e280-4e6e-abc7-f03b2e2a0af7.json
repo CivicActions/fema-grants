@@ -375,7 +375,7 @@
     ],
     "field_review_status": [
         {
-            "value": "review_status_final_review_complete",
+            "value": "review_status_unassigned",
             "lang": "en"
         }
     ]
