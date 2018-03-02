@@ -68,17 +68,23 @@ Always create a new branch to work on each user story or change.
 
 ## Testing
 
-To run unit tests:
+All testing tools run inside Docker, just make sure your terminial is activated (see above) and you should be good to go.
+
+All of the test tools below are run for every pull request, and all tests must pass befor the code can be merged.
+
+To run [PHPunit](https://phpunit.de/) unit tests:
 ```
 phpunit
 ```
 
-To run functional behavior driven (BDD) tests:
+To run functional [Behat](http://behat.org/) behavior driven (BDD) tests:
 ```
 behat
 ```
 
 ### Visual Regression Testing
+
+Visual regression testing checks pages and design components against a baseline of known good images, matrix tested to cover multiple browsers and device resolutions. [Gemini](https://gemini-testing.github.io/) is used to navigate pages and identify page components and (Selenium)[https://www.seleniumhq.org/] (Hub and WebDriver) to orchestrate tests across Chrome and Firefox browsers.
 
 To start visual regression testing, install LFS from https://git-lfs.github.com/ and make sure you have LFS enabled for this repo:
 ```
@@ -93,6 +99,20 @@ gemini test .
 To to use the Gemeni GUI to visually review test results, rerun failing tests to resolve issues and (if needed) approve changes to the baseline images:
 ```
 gemini-gui
+```
+
+### Accessibility Testing
+
+A suite of WCAG 2.0 and Section 508 accessibility tests can by run using [Pa11y](http://pa11y.org/):
+```
+pa11y
+```
+
+## Security Testing
+
+[OWASP Zed Attack Proxy (ZAP)](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) can run scans against the site. By default it will run a 1 minute baseline passive scan, but you can pass in arguments to run other scans as needed.
+```
+zap
 ```
 
 ## Docker image development
@@ -116,4 +136,39 @@ To revert to the shared image delete the override file:
 
 ```
 rm docker-compose.override.yml
+```
+
+# Deployment
+
+A single command will deploy the entire namespaced open source DevSecOps infrastructure and a second command will deploy (or redeploy) the application into that infrastructure. Networking, DNS, SSL, centralized log aggregation, monitoring, CI/CD and secrets are all managed.
+
+To get started you will need to provide API keys for Amazon Web Services, CloudFlare and Slack, as well as some default secrets and passwords for DevSecOps services. First copy the template `cp .env.template .env`, then edit .env and add the values following the links for additional instructions as needed. You will need Docker as well as Docker Machine and Docker Compose installed on your local system.
+
+Then to deploy the DevSecOps infrastructure run:
+```
+. .env
+./bin/deploy [subdomain] [domain]
+```
+
+In the above, `[domain]` is the name of a base domain managed on your CloudFlare account and `[subdomain]` is a subdomain and namespace (for EC2 servers) that will be used for this particular infrastructure deployment.
+
+Once this has completed you should be able to access the following:
+* traefik.[subdomain].[domain] - Traefik proxy indicating configuration and traffic metrics.
+* drone.[subdomain].[domain] - Drone CI/CD automation server - you will need to log in with your Github credentials and enable the repository you want to build.
+* graylog.[subdomain].[domain] - Graylog log aggregation and analysis server. You will need to log in with the username "admin" and the default password configured in your .env file and configure a GELF UDP input on 0.0.0.0 port 12201.
+* cadvisor.[subdomain].[domain] - System monitoring and metrics.
+
+To deploy the application to the server, run:
+```
+eval $(docker-machine env [subdomain].[domain])
+docker-compose -f deploy/docker-compose.app.yaml up -d
+```
+
+To push an updated build, run:
+```
+eval $(docker-machine env [subdomain].[domain])
+docker-compose -f deploy/docker-compose.app.yaml stop
+docker-compose -f deploy/docker-compose.app.yaml rm -f
+docker-compose -f deploy/docker-compose.app.yaml pull
+docker-compose -f deploy/docker-compose.app.yaml up -d
 ```
